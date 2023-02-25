@@ -68,9 +68,13 @@ public class MechController : MonoBehaviour
                 }
             }
             lasers[0].enabled = true;
+            lasers[updatesLate].enabled = true;
         }
         else
+        {
             lasers[0].enabled = false;
+            lasers[updatesLate].enabled = false;
+        }
 
         lasers[0].SetPositions(new Vector3[] { transform.position - cam.transform.right, transform.position + cam.transform.forward - cam.transform.right });
         lasers[updatesLate].SetPositions(new Vector3[] { transform.position + cam.transform.right, transform.position + cam.transform.forward + cam.transform.right });

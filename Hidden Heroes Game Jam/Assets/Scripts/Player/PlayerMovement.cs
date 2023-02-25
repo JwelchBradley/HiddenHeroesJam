@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     #region Fields
     private Rigidbody rigidbody;
     private Transform cameraTransform;
+    private Animator animator;
 
     private float currentGravity = 0.0f;
 
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
         cameraTransform = Camera.main.transform;
     }
@@ -46,6 +48,9 @@ public class PlayerMovement : MonoBehaviour
 
         var xMove = Input.GetAxisRaw("Horizontal");
         var yMove = Input.GetAxisRaw("Vertical");
+
+        var isMoving = xMove != 0 || yMove != 0;
+        animator.SetBool("IsWalking", isMoving);
 
         if (contactObjects.Count != 0)
         {

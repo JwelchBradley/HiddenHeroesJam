@@ -107,6 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2854709431713912808}
   - component: {fileID: 8371963494627432365}
+  - component: {fileID: 6628021404529342598}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -144,6 +145,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 25
+--- !u!114 &6628021404529342598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2854709431713912809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c34f0d671b2f428590c2a79eec0051a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 6
 --- !u!1 &3746469942998317575
 GameObject:
   m_ObjectHideFlags: 0

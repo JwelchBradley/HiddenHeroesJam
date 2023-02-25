@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2671929298997058031}
   - component: {fileID: 2716323260218869575}
   - component: {fileID: -4828731421693118900}
+  - component: {fileID: 5323222014289379233}
   m_Layer: 0
   m_Name: UFOBullet
   m_TagString: Untagged
@@ -130,3 +131,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   shouldDestroy: 1
+--- !u!114 &5323222014289379233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2394772967350874344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c34f0d671b2f428590c2a79eec0051a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1
