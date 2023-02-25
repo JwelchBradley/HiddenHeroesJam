@@ -272,6 +272,9 @@ MonoBehaviour:
   extraGravity: 10
   movementTransform: {fileID: 8035747205801619961}
   groundCheckCollider: {fileID: 470808511798067315}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!54 &8035747206218091992
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -478,7 +481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035747207123606144}
   m_LocalRotation: {x: -0.020871172, y: 0.9788261, z: -0.1557634, w: -0.13115531}
-  m_LocalPosition: {x: 0, y: 0.95700073, z: 0}
+  m_LocalPosition: {x: 0, y: 0.9569999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

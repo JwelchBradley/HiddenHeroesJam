@@ -16,6 +16,11 @@ public class PlayerController : Damageable
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        var healthBar = GameObject.Find("PlayerHealthBar");
+
+        if(healthBar != null)
+        HealthChangeEvent.AddListener(healthBar.GetComponent<HealthBarHandler>().UpdateHealthBar);
     }
 
     // Update is called once per frame
