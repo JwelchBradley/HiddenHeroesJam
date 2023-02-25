@@ -10,35 +10,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DevObjectDetection : MonoBehaviour
 {
     #region Fields
     private RaycastHit hit;
+    private Ray ray;
     int layerMask = 1;
     private GameObject currentObject;
+    public GameObject PressE;
+    private int LayerNoCollison;
+    private int LayerNormal;
+    private bool isOn;
     #endregion
 
     #region Functions
 
     private void Start()
     {
-
+        LayerNoCollison = LayerMask.NameToLayer("NoPlayerCollisions");
+        LayerNormal = LayerMask.NameToLayer("Default");
+        isOn = true;
     }
 
     private void Update()
     {
 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 10.0f))
         {
             if (hit.collider.gameObject.tag == "DevObj")
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+                PressE.SetActive(true);
+
+                if(Input.GetKeyDown(KeyCode.E))
+                {
+                    if (isOn)
+                    {
+                        Debug.Log(LayerNoCollison);
+                        hit.collider.gameObject.layer = LayerNoCollison;
+                        isOn = false;
+                    }
+                    else
+                    {
+                        Debug.Log(LayerNormal);
+                        hit.collider.gameObject.layer = LayerNormal ;
+                        isOn = true;
+                    }
+                }
+            }
+            else
+            {
+                PressE.SetActive(false);
             }
         }
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.yellow);
+             PressE.SetActive(false);
         }
     }
 
