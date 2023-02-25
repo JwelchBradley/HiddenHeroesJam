@@ -12,6 +12,9 @@ public class BasicEnemy : MonoBehaviour
         SHOOTING
     }
 
+    public bool UFO;
+    Vector3 circleRand;
+
     MoveState state;
     public float moveSpeed;
 
@@ -54,10 +57,17 @@ public class BasicEnemy : MonoBehaviour
 
                 break;
             case MoveState.DODGING:
-                if (dodgeRight)
-                    rb.velocity = (transform.right.normalized * dodgeSpeed);
+                if (UFO)
+                {
+                    rb.velocity = (transform.right.normalized * circleRand.x + transform.up.normalized * circleRand.y) * dodgeSpeed;
+                }
                 else
-                    rb.velocity = (transform.right.normalized * dodgeSpeed * -1);
+                {
+                    if (dodgeRight)
+                        rb.velocity = (transform.right.normalized * dodgeSpeed);
+                    else
+                        rb.velocity = (transform.right.normalized * dodgeSpeed * -1);
+                }
 
                 if (Time.time > stateTimer)
                 {
@@ -86,6 +96,8 @@ public class BasicEnemy : MonoBehaviour
         GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
         newBullet.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
         state = MoveState.DODGING;
+        if(UFO)
+            circleRand = Random.insideUnitCircle;
         dodgeRight = System.Convert.ToBoolean(Random.Range(0, 2));
         stateTimer = Time.time + dodgeLength;
         shootTimer = Time.time + shootCooldown;

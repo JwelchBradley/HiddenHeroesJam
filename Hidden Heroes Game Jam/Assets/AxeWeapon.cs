@@ -7,14 +7,23 @@ public class AxeWeapon : Weapon
     #region Fields
     [SerializeField] private float timeBetweenSwings = 0.5f;
     [SerializeField] private float throwForce = 100.0f;
+    [SerializeField] private float throwRotation = 15.0f;
 
     [SerializeField] private float meleeRange = 1.0f;
     [SerializeField] private GameObject thrownAxePrefab;
 
     [SerializeField] private float meleeDamage = 1.0f;
     [SerializeField] private float thrownDamage = 1.0f;
+    [SerializeField] private float timeBeforeReturning = 1.0f;
+    [SerializeField] private float returningForce = 100.0f;
+
+
+    [HideInInspector] public bool hasThrown = false;
+    private bool isAiming = false;
 
     private BoxCollider meleeCollider;
+
+    private List<Damageable> enemiesInMelee = new List<Damageable>();
 
     #region Zoom
     [Header("Zoom")]
@@ -40,18 +49,11 @@ public class AxeWeapon : Weapon
 
     public override void WeaponDown()
     {
-        Collider[] colliders = Physics.OverlapBox(transform.TransformPoint(meleeCollider.center), meleeCollider.bounds.extents/2);
-
-        var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        cube.transform.position = transform.TransformPoint(meleeCollider.center);
-        cube.GetComponent<BoxCollider>().center = meleeCollider.bounds.center;
-        cube.GetComponent<BoxCollider>().size = meleeCollider.size;
-
-        foreach (Collider col in colliders)
+        if(!hasThrown)
         {
-            if (col.gameObject.CompareTag("Enemy"))
+            foreach (Damageable damageable in enemiesInMelee)
             {
-                col.gameObject.GetComponent<Damageable>().UpdateHealth(-meleeDamage);
+                damageable.UpdateHealth(-meleeDamage);
             }
         }
     }
@@ -63,19 +65,39 @@ public class AxeWeapon : Weapon
 
     public override void AltWeaponDown()
     {
-        StopZoomRoutine();
+        if (!hasThrown)
+        {
+            StopZoomRoutine();
 
-        print("Alt down");
-        zoomRoutine = StartCoroutine(ZoomRoutine(zoomInSpeed, 1));
+            isAiming = true;
+            print("Alt down");
+            zoomRoutine = StartCoroutine(ZoomRoutine(zoomInSpeed, 1));
+        }
     }
-
-
 
     public override void AltWeaponUp()
     {
-        StopZoomRoutine();
+        if (isAiming)
+        {
+            var thrownAx = Instantiate(thrownAxePrefab, transform.position, transform.rotation);
+            var axRb = thrownAx.GetComponent<Rigidbody>();
+            axRb.AddForce(transform.forward * throwForce);
 
-        zoomRoutine = StartCoroutine(ZoomRoutine(zoomOutSpeed, -1));
+            axRb.angularVelocity = transform.right * throwRotation;
+
+            var thownAxe = thrownAx.GetComponent<ThrownAxeBehaviour>();
+            thownAxe.damage = thrownDamage;
+            thownAxe.timeBeforeReturning = timeBeforeReturning;
+            thownAxe.returningForce = returningForce;
+
+
+            hasThrown = true;
+            isAiming = false;
+
+            StopZoomRoutine();
+
+            zoomRoutine = StartCoroutine(ZoomRoutine(zoomOutSpeed, -1));
+        }
     }
 
     #region Zoom
@@ -104,5 +126,21 @@ public class AxeWeapon : Weapon
         zoomRoutine = null;
     }
     #endregion
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            enemiesInMelee.Add(other.gameObject.GetComponent<Damageable>());
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            enemiesInMelee.Remove(other.gameObject.GetComponent<Damageable>());
+        }
+    }
     #endregion
 }
