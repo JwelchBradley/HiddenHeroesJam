@@ -43,6 +43,21 @@ public class AxeWeapon : Weapon
     [SerializeField] private float zoomInSpeed = 2.0f;
     [SerializeField] private float zoomOutSpeed = 4.0f;
 
+    [SerializeField] private float cameraShakeFrequency = 1.0f;
+
+    private float currentCameraShake = 0.0f;
+
+    private float CurrentCameraShake
+    {
+        get => currentCameraShake;
+        set
+        {
+            cameraController.CameraShake = -currentCameraShake;
+            currentCameraShake = value;
+            cameraController.CameraShake = currentCameraShake;
+        }
+    }
+
     private float currentZoom = 1.0f;
     private Coroutine zoomRoutine;
 
@@ -66,7 +81,11 @@ public class AxeWeapon : Weapon
     #region Melee
     public override void WeaponDown()
     {
-        if(thrownAxeBehaviour == null && !isAiming && Time.time > timeOfLastSwing + timeBeforeGaruanteedReturn)
+        if (isAiming)
+        {
+            StopAiming();
+        }
+        else if(thrownAxeBehaviour == null && Time.time > timeOfLastSwing + timeBeforeGaruanteedReturn)
         {
             Melee();
         }
@@ -183,6 +202,9 @@ public class AxeWeapon : Weapon
             currentZoom -= mod * speed * Time.fixedDeltaTime;
             currentZoom = Mathf.Clamp(currentZoom, aimZoom, 1);
             cameraController.Zoom = currentZoom;
+
+            CurrentCameraShake = Mathf.Lerp(0, cameraShakeFrequency, Mathf.InverseLerp(1, aimZoom, currentZoom));
+
             yield return new WaitForFixedUpdate();
         }
 
