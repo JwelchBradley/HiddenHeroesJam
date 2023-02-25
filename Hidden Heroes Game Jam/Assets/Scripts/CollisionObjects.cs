@@ -18,12 +18,9 @@ public class CollisionObjects : MonoBehaviour
     #endregion
 
     #region Functions
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Club")
-        {
-            Destroy(triggerObject);
-        }
+        Destroy(triggerObject);
     }
 
     #endregion

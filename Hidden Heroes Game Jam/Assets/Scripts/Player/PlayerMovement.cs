@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform movementTransform;
     [SerializeField] private SphereCollider groundCheckCollider;
 
+    [SerializeField] private LayerMask groundMask;
 
     private Vector3 normal;
     private List<GameObject> contactObjects = new List<GameObject>(); 
@@ -64,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            Collider[] colliders = Physics.OverlapSphere(groundCheckCollider.transform.position, groundCheckCollider.radius);
+            Collider[] colliders = Physics.OverlapSphere(groundCheckCollider.transform.position, groundCheckCollider.radius, groundMask);
 
             foreach(Collider col in colliders)
             {
@@ -81,12 +82,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        contactObjects.Add(collision.gameObject);
-
         foreach (ContactPoint contact in collision.contacts)
         {
             if (Vector3.Angle(contact.normal, Vector3.up) < maxSlope)
             {
+                if(!contactObjects.Contains(collision.gameObject))
+                contactObjects.Add(collision.gameObject);
+
                 normal = contact.normal;
             }
         }
