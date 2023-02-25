@@ -11,4 +11,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Levels/DavidsHouse.unity
+    guid: aa7d2f6bbfd9db847bd6e77b80340a8c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Evilition.unity
+    guid: 9f41471c80b55ab4fb5b501b84244094
+  - enabled: 1
+    path: Assets/Scenes/Levels/FinalBoss.unity
+    guid: 4cbb1cc7e54a7aa45be2d249edf205e4
+  - enabled: 1
+    path: Assets/Scenes/Levels/GoldenHarbor.unity
+    guid: d064e1ef092b800408a55a8ff917aacf
+  - enabled: 1
+    path: Assets/Scenes/Levels/MechFlyover.unity
+    guid: 88ec811fbf2485b4781783d016aed508
+  - enabled: 1
+    path: Assets/Scenes/Level Select.unity
+    guid: e36127cae4a462e4cac514ba525c0db7
   m_configObjects: {}
