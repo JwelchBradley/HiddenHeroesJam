@@ -1114,6 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187bb9e32cb76de4cbed589b479dfa44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PressE: {fileID: 0}
 --- !u!43 &789369353
 Mesh:
   m_ObjectHideFlags: 0
@@ -1431,6 +1432,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 312401878, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
+    - target: {fileID: 827996685, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
     - target: {fileID: 1375211898, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1447,6 +1456,14 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 1700
       objectReference: {fileID: 0}
+    - target: {fileID: 1828085940, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
+    - target: {fileID: 1906963607, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
     - target: {fileID: 2005771085, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
       propertyPath: m_Mesh
       value: 
