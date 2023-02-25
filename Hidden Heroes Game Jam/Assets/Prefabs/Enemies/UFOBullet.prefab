@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2716323260218869575}
   - component: {fileID: -4828731421693118900}
   m_Layer: 0
-  m_Name: AlienBullet
+  m_Name: UFOBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,5 +128,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 047059c372e4b4c3fb9603290f54b54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 0
   shouldDestroy: 1
