@@ -38,7 +38,7 @@ public class DevObjectDetection : MonoBehaviour
     {
 
 
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 10.0f))
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 7.0f))
         {
             if (hit.collider.gameObject.tag == "DevObj")
             {
