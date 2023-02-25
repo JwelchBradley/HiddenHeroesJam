@@ -16,6 +16,7 @@ public class DevObjectDetection : MonoBehaviour
     #region Fields
     private RaycastHit hit;
     int layerMask = 1;
+    private GameObject currentObject;
     #endregion
 
     #region Functions
@@ -28,12 +29,13 @@ public class DevObjectDetection : MonoBehaviour
     private void Update()
     {
 
-
-        if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            if (hit.collider.gameObject.tag == "DevObj")
+            {
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
+            }
         }
-
         else
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.yellow);
