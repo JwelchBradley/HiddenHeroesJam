@@ -52,14 +52,12 @@ public class DevObjectDetection : MonoBehaviour
                 {
                     if (isOn)
                     {
-                        Debug.Log(LayerNoCollison);
                         hit.collider.gameObject.layer = LayerNoCollison;
                         hit.collider.gameObject.GetComponent<MeshRenderer>().material = semiclear;
                         isOn = false;
                     }
                     else
                     {
-                        Debug.Log(LayerNormal);
                         hit.collider.gameObject.layer = LayerNormal;
                         hit.collider.gameObject.GetComponent<MeshRenderer>().material = solid;
                         isOn = true;
