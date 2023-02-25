@@ -1094,6 +1094,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5024440720183019756, guid: 51e57dd88e98f944faefbb872bfaa107,
+        type: 3}
+      propertyPath: field of view
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 5024440720183019758, guid: 51e57dd88e98f944faefbb872bfaa107,
         type: 3}
       propertyPath: m_Name
@@ -1126,6 +1131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PressE: {fileID: 1975977055}
+  solid: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
+  semiclear: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1200,7 @@ PrefabInstance:
     - target: {fileID: 827996685, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2279461bd12541845aa721e57c1bcdb9, type: 2}
+      objectReference: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
     - target: {fileID: 1375211898, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1218,6 +1225,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DevObj
       objectReference: {fileID: 0}
+    - target: {fileID: 1828085940, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
     - target: {fileID: 1906963604, guid: c34fa68c55960654d88d07478307c5fc, type: 3}
       propertyPath: m_TagString
       value: DevObj
