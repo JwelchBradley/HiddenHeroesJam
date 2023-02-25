@@ -22,8 +22,13 @@ public class AudreyAnimTest : MonoBehaviour
         anim.SetTrigger("Hurt");
     }
 
-    public void ThrowClub()
+    public void StartAttack()
     {
-        anim.SetTrigger("Attacking");
+        anim.SetBool("Attacking", true);
+    }
+
+    public void StopAttack()
+    {
+        anim.SetBool("Attacking", false);
     }
 }
