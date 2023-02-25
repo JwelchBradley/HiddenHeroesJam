@@ -9,7 +9,7 @@ public class Damageable : MonoBehaviour
     [Tooltip("The amount of health it starts with and its max")]
     [SerializeField] private float maxHealth = 100;
 
-    private UnityEvent<float, float> HealthChangeEvent = new UnityEvent<float, float>();
+    public UnityEvent<float, float> HealthChangeEvent = new UnityEvent<float, float>();
 
     private float currentHealth = 0;
 
