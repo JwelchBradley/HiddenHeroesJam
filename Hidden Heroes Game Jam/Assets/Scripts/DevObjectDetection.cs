@@ -19,7 +19,7 @@ public class DevObjectDetection : MonoBehaviour
     private Ray ray;
     int layerMask = 1;
     private GameObject currentObject;
-    public GameObject PressE;
+    private GameObject PressE;
     private int LayerNoCollison;
     private int LayerNormal;
     private bool isOn;
@@ -33,6 +33,11 @@ public class DevObjectDetection : MonoBehaviour
 
     private void Start()
     {
+        PressE = GameObject.Find("Press E");
+
+        if (PressE != null)
+            PressE.SetActive(false);
+
         LayerNoCollison = LayerMask.NameToLayer("NoPlayerCollisions");
         LayerNormal = LayerMask.NameToLayer("Default");
         isOn = true;
@@ -40,12 +45,11 @@ public class DevObjectDetection : MonoBehaviour
 
     private void Update()
     {
-
-
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 7.0f))
         {
             if (hit.collider.gameObject.tag == "DevObj")
             {
+                if(PressE != null)
                 PressE.SetActive(true);
 
                 if(Input.GetKeyDown(KeyCode.E))
@@ -66,12 +70,14 @@ public class DevObjectDetection : MonoBehaviour
             }
             else
             {
-                PressE.SetActive(false);
+                if (PressE != null)
+                    PressE.SetActive(false);
             }
         }
         else
         {
-             PressE.SetActive(false);
+            if (PressE != null)
+                PressE.SetActive(false);
         }
     }
 

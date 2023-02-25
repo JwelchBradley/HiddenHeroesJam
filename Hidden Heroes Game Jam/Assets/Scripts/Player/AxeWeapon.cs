@@ -85,7 +85,7 @@ public class AxeWeapon : Weapon
         {
             StopAiming();
         }
-        else if(thrownAxeBehaviour == null && Time.time > timeOfLastSwing + timeBeforeGaruanteedReturn)
+        else if(thrownAxeBehaviour == null && Time.time > timeOfLastSwing + timeBetweenSwings)
         {
             Melee();
         }
