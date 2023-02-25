@@ -17,8 +17,10 @@ public class ThrownAxeBehaviour : MonoBehaviour
     [HideInInspector] public float damage;
     [HideInInspector] public float timeBeforeReturning;
     [HideInInspector] public float returningForce;
+    [HideInInspector] public float timeBeforeGaruanteedReturn;
 
     private Transform playerTransform;
+    private bool hasHit = false;
     private bool isReturning = false;
     private Rigidbody rigidbody;
     private Collider col;
@@ -32,6 +34,11 @@ public class ThrownAxeBehaviour : MonoBehaviour
         col = GetComponent<Collider>();
     }
 
+    private void Start()
+    {
+        StartCoroutine(ReturnFromOffMap());
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
@@ -43,7 +50,6 @@ public class ThrownAxeBehaviour : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                other.gameObject.GetComponentInChildren<AxeWeapon>().hasThrown = false;
                 Destroy(gameObject);
             }
         }
@@ -51,18 +57,44 @@ public class ThrownAxeBehaviour : MonoBehaviour
         {
             if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Ax"))
             {
-                rigidbody.constraints = RigidbodyConstraints.FreezeAll;
-                col.enabled = false;
-
+                Return();
                 StartCoroutine(WaitToReturn());
             }
         }
+    }
+
+    private IEnumerator ReturnFromOffMap()
+    {
+        yield return new WaitForSeconds(timeBeforeGaruanteedReturn);
+
+        if (!hasHit)
+        {
+            ReturnImmediately();
+        }
+    }
+
+    public void ReturnImmediately()
+    {
+        Return();
+        StartCoroutine(ReturningRoutine());
+    }
+
+    private void Return()
+    {
+        rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+        col.enabled = false;
+        hasHit = true;
     }
 
     private IEnumerator WaitToReturn()
     {
         yield return new WaitForSeconds(timeBeforeReturning);
 
+        yield return ReturningRoutine();
+    }
+
+    private IEnumerator ReturningRoutine()
+    {
         rigidbody.constraints = RigidbodyConstraints.None;
         rigidbody.useGravity = false;
         col.enabled = true;
@@ -70,7 +102,7 @@ public class ThrownAxeBehaviour : MonoBehaviour
 
         while (true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, Time.fixedDeltaTime*returningForce);
+            rigidbody.MovePosition(Vector3.MoveTowards(transform.position, playerTransform.position, Time.fixedDeltaTime * returningForce));
 
             yield return new WaitForFixedUpdate();
         }
