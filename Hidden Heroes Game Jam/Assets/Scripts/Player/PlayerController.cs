@@ -6,13 +6,17 @@ public class PlayerController : Damageable
 {
     #region Fields
     private Weapon weapon;
+    [SerializeField] private bool startWithAxe = true;
     #endregion
 
     #region Functions
     // Start is called before the first frame update
     private void Awake()
     {
-        weapon = GetComponentInChildren<Weapon>();
+        if (startWithAxe)
+        {
+            GetAxe();
+        }
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -23,6 +27,11 @@ public class PlayerController : Damageable
         HealthChangeEvent.AddListener(healthBar.GetComponent<HealthBarHandler>().UpdateHealthBar);
     }
 
+    public void GetAxe()
+    {
+        weapon = GetComponentInChildren<Weapon>();
+    }
+
     // Update is called once per frame
     private void Update()
     {
@@ -31,6 +40,8 @@ public class PlayerController : Damageable
 
     private void WeaponInput()
     {
+        if (weapon == null) return;
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             weapon.WeaponDown();
