@@ -1,5 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1273118781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1273118782}
+  - component: {fileID: 1273118783}
+  - component: {fileID: 1273118784}
+  m_Layer: 0
+  m_Name: Axe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1273118782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273118781}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8035747206385707613}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1273118783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273118781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60672263a5d7be54bbc6d0d6f2f9af63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenSwings: 0.5
+  throwForce: 0
+  meleeRange: 100
+  thrownAxePrefab: {fileID: 5067118392898219247, guid: e105c3bc601d49d42aaf153d6344b22c,
+    type: 3}
+  meleeDamage: 100
+  thrownDamage: 1
+  aimZoom: 0.5
+  zoomInSpeed: 2
+  zoomOutSpeed: 4
+--- !u!65 &1273118784
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273118781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.54, y: 1.5, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &42569061257567997
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +327,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.557, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1273118782}
   m_Father: {fileID: 8035747206218091994}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -275,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f63ce065f9fa645a37c35fc7da052d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cinemachine: {fileID: 8035747207123605886}
 --- !u!1 &8035747206814136689
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +482,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 8035747206385707613}
   m_Lens:
-    FieldOfView: 90
+    FieldOfView: 75
     OrthographicSize: 5
     NearClipPlane: 0.01
     FarClipPlane: 1000

@@ -33,14 +33,21 @@ public class AxeWeapon : Weapon
     private void Awake()
     {
         meleeCollider = GetComponent<BoxCollider>();
+        meleeCollider.size = new Vector3(2, 2, meleeRange);
+        meleeCollider.center = new Vector3(0, 0, meleeRange / 2);
         cameraController = FindObjectOfType<PlayerCameraController>();
     }
 
     public override void WeaponDown()
     {
-        Collider[] colliders = Physics.OverlapBox(transform.position, meleeCollider.bounds.extents/2);
+        Collider[] colliders = Physics.OverlapBox(transform.TransformPoint(meleeCollider.center), meleeCollider.bounds.extents/2);
 
-        foreach(Collider col in colliders)
+        var cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        cube.transform.position = transform.TransformPoint(meleeCollider.center);
+        cube.GetComponent<BoxCollider>().center = meleeCollider.bounds.center;
+        cube.GetComponent<BoxCollider>().size = meleeCollider.size;
+
+        foreach (Collider col in colliders)
         {
             if (col.gameObject.CompareTag("Enemy"))
             {
