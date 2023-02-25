@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1246,22 +1246,22 @@ PrefabInstance:
     - target: {fileID: 5024440720183019755, guid: 51e57dd88e98f944faefbb872bfaa107,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.13115531
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5024440720183019755, guid: 51e57dd88e98f944faefbb872bfaa107,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.020871172
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5024440720183019755, guid: 51e57dd88e98f944faefbb872bfaa107,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9788261
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5024440720183019755, guid: 51e57dd88e98f944faefbb872bfaa107,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.1557634
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5024440720183019755, guid: 51e57dd88e98f944faefbb872bfaa107,
         type: 3}
@@ -2591,6 +2591,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 12810643}
+    - target: {fileID: 668045574160000042, guid: be59b2947172f465e840b008f4e4f2c1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6940510ee4a284a4990bf2cf86b91375, type: 2}
     - target: {fileID: 736944941978175872, guid: be59b2947172f465e840b008f4e4f2c1,
         type: 3}
       propertyPath: m_Mesh
@@ -2611,6 +2616,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level
       objectReference: {fileID: 0}
+    - target: {fileID: 1267490126893573078, guid: be59b2947172f465e840b008f4e4f2c1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f9649a0f0cc177f4e81d282d75cae832, type: 2}
     - target: {fileID: 1655899118380981336, guid: be59b2947172f465e840b008f4e4f2c1,
         type: 3}
       propertyPath: m_Mesh
@@ -2686,11 +2696,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3758532180998936715, guid: be59b2947172f465e840b008f4e4f2c1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6940510ee4a284a4990bf2cf86b91375, type: 2}
+    - target: {fileID: 3943238109669290961, guid: be59b2947172f465e840b008f4e4f2c1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f9649a0f0cc177f4e81d282d75cae832, type: 2}
     - target: {fileID: 4817890179856177607, guid: be59b2947172f465e840b008f4e4f2c1,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2043167773}
+    - target: {fileID: 5272868299947963791, guid: be59b2947172f465e840b008f4e4f2c1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fe283eede5295cd43a425125bce7ac25, type: 2}
     - target: {fileID: 5455020368775631555, guid: be59b2947172f465e840b008f4e4f2c1,
         type: 3}
       propertyPath: m_Mesh
