@@ -6,6 +6,9 @@ public class PlayerController : Damageable
 {
     #region Fields
     private Weapon weapon;
+
+    private GameObject Discord;
+    bool DiscordOn = false;
     #endregion
 
     #region Functions
@@ -22,6 +25,7 @@ public class PlayerController : Damageable
     private void Update()
     {
         WeaponInput();
+        OpenDiscord();
     }
 
     private void WeaponInput()
@@ -46,5 +50,22 @@ public class PlayerController : Damageable
             weapon.AltWeaponUp();
         }
     }
+
+    private void OpenDiscord()
+    {
+        if (Input.GetKeyDown(KeyCode.D) && DiscordOn == false)
+        {
+            Discord.SetActive(true);
+            DiscordOn = true;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.D) && DiscordOn == true)
+        {
+            Discord.SetActive(false);
+            DiscordOn = false;
+        }
+         
+        
+    }    
     #endregion
 }
