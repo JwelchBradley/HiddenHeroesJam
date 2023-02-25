@@ -29,7 +29,7 @@ public class Damageable : MonoBehaviour
     #endregion
 
     #region Functions
-    private void Awake()
+    protected virtual void Awake()
     {
         CurrentHealth = maxHealth;
     }
