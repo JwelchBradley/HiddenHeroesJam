@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8995516629347645174}
   - component: {fileID: 8995516629347645173}
-  - component: {fileID: 8995516629347645172}
   - component: {fileID: 8995516629347645171}
   - component: {fileID: 8995516629347645170}
   - component: {fileID: 8995516629347645169}
@@ -94,18 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8995516629347645172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8995516629347645135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd9c413a5b544994bfe2d3a93e0bcf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &8995516629347645171
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -160,11 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822a79bcdb7c84b6eb7d7959478c90da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
+  UFO: 0
+  moveSpeed: 6
   shootCooldown: 1
   shootRange: 8
   shootRangeExtra: 2
-  dodgeSpeed: 12
+  dodgeSpeed: 6
   dodgeLength: 0.6
   bulletSpeed: 25
   bullet: {fileID: 2394772967350874344, guid: 14708eb2458704cadbab5c1ddfa6d381, type: 3}
