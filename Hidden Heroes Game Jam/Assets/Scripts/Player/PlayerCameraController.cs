@@ -7,6 +7,7 @@ public class PlayerCameraController : MonoBehaviour
 {
     #region Fields
     [SerializeField] private CinemachineVirtualCamera cinemachine;
+    private CinemachineBasicMultiChannelPerlin cameraShake;
     private float mouseSens = 1.0f;
 
     private float xRot;
@@ -21,12 +22,21 @@ public class PlayerCameraController : MonoBehaviour
             cinemachine.m_Lens.FieldOfView = startingFOV * value;
         }
     }
+
+    public float CameraShake
+    {
+        set
+        {
+            cameraShake.m_FrequencyGain += value;
+        }
+    }
     #endregion
 
     #region Functions
     private void Awake()
     {
         startingFOV = cinemachine.m_Lens.FieldOfView;
+        cameraShake = cinemachine.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
 
     // Update is called once per frame

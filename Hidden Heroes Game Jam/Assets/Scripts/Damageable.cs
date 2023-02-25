@@ -9,6 +9,9 @@ public class Damageable : MonoBehaviour
     [Tooltip("The amount of health it starts with and its max")]
     [SerializeField] private float maxHealth = 100;
 
+    [Tooltip("The object to spawn on death")]
+    [SerializeField] public GameObject corpse;
+
     public UnityEvent<float, float> HealthChangeEvent = new UnityEvent<float, float>();
 
     private float currentHealth = 0;
@@ -45,6 +48,8 @@ public class Damageable : MonoBehaviour
 
     protected virtual void DestructionEvent()
     {
+        if (corpse)
+            Instantiate(corpse, transform.position, transform.rotation);
         Destroy(gameObject);
     }
     #endregion
