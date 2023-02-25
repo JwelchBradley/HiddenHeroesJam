@@ -1,12 +1,3 @@
-/*****************************************************************************
-// File Name :         PlayerController.cs
-// Author :            #AUTHOR#
-// Contact :           #CONTACT#
-// Creation Date :     #DATE#
-// Company :           #COMPANY#
-//
-// Brief Description : Description of what the script does
-*****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,9 +16,32 @@ public class PlayerController : Damageable
     }
 
     // Update is called once per frame
-    private void FixedUpdate()
+    private void Update()
     {
-        
+        WeaponInput();
+    }
+
+    private void WeaponInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse1))
+        {
+
+        }
     }
     #endregion
 }
