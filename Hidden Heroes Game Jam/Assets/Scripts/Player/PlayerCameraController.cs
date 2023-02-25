@@ -6,18 +6,27 @@ using UnityEngine;
 public class PlayerCameraController : MonoBehaviour
 {
     #region Fields
-    private CinemachineVirtualCamera cinemachine;
+    [SerializeField] private CinemachineVirtualCamera cinemachine;
     private float mouseSens = 1.0f;
 
     private float xRot;
     private float yRot;
+
+    private float startingFOV = 0;
+
+    public float Zoom
+    {
+        set
+        {
+            cinemachine.m_Lens.FieldOfView = startingFOV * value;
+        }
+    }
     #endregion
 
     #region Functions
-    // Start is called before the first frame update
     private void Awake()
     {
-        
+        startingFOV = cinemachine.m_Lens.FieldOfView;
     }
 
     // Update is called once per frame
