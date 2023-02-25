@@ -1228,6 +1228,11 @@ PrefabInstance:
       propertyPath: m_Lens.FieldOfView
       value: 75
       objectReference: {fileID: 0}
+    - target: {fileID: 8035747207123605887, guid: eaa5c66af5dbd35468c58007871a2b62,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.95700073
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaa5c66af5dbd35468c58007871a2b62, type: 3}
 --- !u!4 &1441216103 stripped
@@ -1294,6 +1299,7 @@ MonoBehaviour:
   aimZoom: 2
   zoomInSpeed: 2
   zoomOutSpeed: 4
+  cameraShakeFrequency: 1
 --- !u!65 &1642907650
 BoxCollider:
   m_ObjectHideFlags: 0
