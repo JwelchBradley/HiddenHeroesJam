@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1273118784}
   m_Layer: 0
   m_Name: Axe
-  m_TagString: Untagged
+  m_TagString: Ax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,15 +46,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetweenSwings: 0.5
-  throwForce: 0
-  meleeRange: 100
+  throwForce: 1500
+  throwRotation: 15
+  meleeRange: 6
   thrownAxePrefab: {fileID: 5067118392898219247, guid: e105c3bc601d49d42aaf153d6344b22c,
     type: 3}
-  meleeDamage: 100
-  thrownDamage: 1
-  aimZoom: 0.5
-  zoomInSpeed: 2
-  zoomOutSpeed: 4
+  meleeDamage: 50
+  thrownDamage: 100
+  timeBeforeReturning: 1
+  returningForce: 100
+  hasThrown: 0
+  aimZoom: 0.8
+  zoomInSpeed: 0.25
+  zoomOutSpeed: 3
 --- !u!65 &1273118784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66,7 +70,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.54, y: 1.5, z: 2}
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &42569061257567997
 GameObject:
@@ -80,7 +84,7 @@ GameObject:
   - component: {fileID: 470808511798067315}
   m_Layer: 0
   m_Name: Ground Check
-  m_TagString: Untagged
+  m_TagString: Ax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
