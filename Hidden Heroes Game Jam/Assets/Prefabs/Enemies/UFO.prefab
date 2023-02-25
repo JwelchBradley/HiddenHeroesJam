@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 8995516629347645135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 0.66, z: 0.66}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8995516629626897253}
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  corpse: {fileID: 639027100252861845, guid: 065ddedda54f147cca18638fa0a8e1e8, type: 3}
   HealthChangeEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UFO: 0
-  moveSpeed: 6
+  moveSpeed: 40
   shootCooldown: 1
   shootRange: 8
   shootRangeExtra: 2
@@ -185,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  corpse: {fileID: 639027100252861845, guid: 065ddedda54f147cca18638fa0a8e1e8, type: 3}
   HealthChangeEvent:
     m_PersistentCalls:
       m_Calls: []
