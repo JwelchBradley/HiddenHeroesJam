@@ -23,6 +23,10 @@ public class DevObjectDetection : MonoBehaviour
     private int LayerNoCollison;
     private int LayerNormal;
     private bool isOn;
+
+    public Material solid;
+    public Material semiclear;
+
     #endregion
 
     #region Functions
@@ -38,7 +42,7 @@ public class DevObjectDetection : MonoBehaviour
     {
 
 
-        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 10.0f))
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 7.0f))
         {
             if (hit.collider.gameObject.tag == "DevObj")
             {
@@ -50,12 +54,14 @@ public class DevObjectDetection : MonoBehaviour
                     {
                         Debug.Log(LayerNoCollison);
                         hit.collider.gameObject.layer = LayerNoCollison;
+                        hit.collider.gameObject.GetComponent<MeshRenderer>().material = semiclear;
                         isOn = false;
                     }
                     else
                     {
                         Debug.Log(LayerNormal);
-                        hit.collider.gameObject.layer = LayerNormal ;
+                        hit.collider.gameObject.layer = LayerNormal;
+                        hit.collider.gameObject.GetComponent<MeshRenderer>().material = solid;
                         isOn = true;
                     }
                 }
@@ -67,7 +73,6 @@ public class DevObjectDetection : MonoBehaviour
         }
         else
         {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.yellow);
              PressE.SetActive(false);
         }
     }

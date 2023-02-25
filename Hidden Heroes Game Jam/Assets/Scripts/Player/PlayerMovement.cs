@@ -70,7 +70,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (!col.gameObject.CompareTag("Player"))
                 {
-                    print(col.gameObject.tag);
                     var vel = rigidbody.velocity;
                     vel.y = jumpVelocity;
                     rigidbody.velocity = vel;
