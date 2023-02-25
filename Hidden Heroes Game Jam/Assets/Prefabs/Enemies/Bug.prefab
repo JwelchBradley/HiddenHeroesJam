@@ -181,6 +181,7 @@ MonoBehaviour:
   moveSpeed: 8.5
   jumpWait: 1
   jumpLength: 1
+  extraGravity: 10
 --- !u!111 &8550457276536429579
 Animation:
   m_ObjectHideFlags: 0
@@ -224,6 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  corpse: {fileID: 0}
   HealthChangeEvent:
     m_PersistentCalls:
       m_Calls: []
