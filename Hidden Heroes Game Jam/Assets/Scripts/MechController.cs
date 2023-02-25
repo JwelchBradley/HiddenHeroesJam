@@ -5,6 +5,7 @@ using UnityEngine;
 public class MechController : MonoBehaviour
 {
     Rigidbody rb;
+    DavidFace face;
 
     public GameObject laserObj;
     LineRenderer[] lasers;
@@ -20,6 +21,7 @@ public class MechController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        face = FindObjectOfType<DavidFace>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -69,11 +71,13 @@ public class MechController : MonoBehaviour
             }
             lasers[0].enabled = true;
             lasers[updatesLate].enabled = true;
+            face.anim.SetBool("Attacking", true);
         }
         else
         {
             lasers[0].enabled = false;
             lasers[updatesLate].enabled = false;
+            face.anim.SetBool("Attacking", false);
         }
 
         lasers[0].SetPositions(new Vector3[] { transform.position - cam.transform.right, transform.position + cam.transform.forward - cam.transform.right });
