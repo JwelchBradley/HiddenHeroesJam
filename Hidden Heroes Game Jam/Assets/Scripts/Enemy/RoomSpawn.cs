@@ -18,7 +18,8 @@ public class RoomSpawn : MonoBehaviour
                 spawn.SetActive(true);
             }
 
-            realWall.SetActive(true);
+            if(realWall)
+                realWall.SetActive(true);
 
             this.enabled = false;
         }
