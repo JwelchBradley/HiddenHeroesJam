@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e1ca7d5b3c0a463aadc53bb4669e22b
+guid: 95907d450dd5d4b8996e96ab6e1ec516
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AlienEnemy_LowRes_0
+      name: AlienEnemy_LowRes 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 236
-        height: 275
+        width: 116
+        height: 132
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44bec48c119de427cbc6282f51765561
-      internalID: 809519852
+      spriteID: 545a3d7776763469bae4a95d32b0ed67
+      internalID: 1941995106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienEnemy_LowRes_1
+      name: AlienEnemy_LowRes 1_1
       rect:
         serializedVersion: 2
-        x: 236
+        x: 116
         y: 0
-        width: 236
-        height: 275
+        width: 116
+        height: 132
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fbdadbdbe30247fda83d4beb8f540ef
-      internalID: 1339031316
+      spriteID: 3ff1b3eb799fd4cd881cc8c6fbd444e7
+      internalID: 1501134743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienEnemy_LowRes_2
+      name: AlienEnemy_LowRes 1_2
       rect:
         serializedVersion: 2
-        x: 472
+        x: 232
         y: 0
-        width: 236
-        height: 275
+        width: 116
+        height: 132
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22278ad086fc34108b153af0aafc3138
-      internalID: -611099328
+      spriteID: b98123dbe084d4612b230c9eb92ce313
+      internalID: 1413261688
       vertices: []
       indices: 
       edges: []
@@ -169,7 +169,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: ba75414215191472da876b48f4f324ce
     internalID: 0
     vertices: []
     indices: 
@@ -177,9 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AlienEnemy_LowRes_2: -611099328
-      AlienEnemy_LowRes_1: 1339031316
-      AlienEnemy_LowRes_0: 809519852
+      AlienEnemy_LowRes 1_1: 1501134743
+      AlienEnemy_LowRes 1_0: 1941995106
+      AlienEnemy_LowRes 1_2: 1413261688
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
