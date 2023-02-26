@@ -11,6 +11,9 @@ public class AxeWeapon : Weapon
 
     #region Melee
     [Header("Melee")]
+    [SerializeField] private float holdInputRefTime = 0.25f;
+    private Coroutine holdInputReference;
+
     [SerializeField] private AudioClip meleeSound;
     [SerializeField] private float timeBetweenSwings = 0.5f;
     [SerializeField] private float meleeRange = 1.0f;
@@ -119,9 +122,21 @@ public class AxeWeapon : Weapon
         {
             StopAiming();
         }
-        else if(thrownAxeBehaviour == null && Time.time > timeOfLastSwing + timeBetweenSwings)
+        else if(thrownAxeBehaviour == null)
         {
-            Melee();
+            if(Time.time > timeOfLastSwing + timeBetweenSwings)
+            {
+                Melee();
+            }
+            else
+            {
+                if(holdInputReference != null)
+                {
+                    StopCoroutine(holdInputReference);
+                }
+
+                holdInputReference = StartCoroutine(AttackInputReference());
+            }
         }
     }
 
@@ -153,6 +168,25 @@ public class AxeWeapon : Weapon
                 }
             }
         }
+    }
+
+    private IEnumerator AttackInputReference()
+    {
+        var t = 0.0f;
+
+        while(t < holdInputRefTime)
+        {
+            yield return new WaitForFixedUpdate();
+
+            t += Time.fixedDeltaTime;
+
+            if (Time.time > timeOfLastSwing + timeBetweenSwings && thrownAxeBehaviour == null && !isAiming)
+            {
+                Melee();
+            }
+        }
+
+        holdInputReference = null;
     }
 
     private IEnumerator AttackFace()

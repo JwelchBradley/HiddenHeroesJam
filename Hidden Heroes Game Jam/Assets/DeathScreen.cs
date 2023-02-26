@@ -21,13 +21,16 @@ public class DeathScreen : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        
+        FindObjectOfType<PlayerController>().HealthChangeEvent.AddListener(DieEvent);
+        gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    private void FixedUpdate()
+    private void DieEvent(float current, float max)
     {
-        
+        if(current == 0)
+        {
+            gameObject.SetActive(true);
+        }
     }
     #endregion
 }

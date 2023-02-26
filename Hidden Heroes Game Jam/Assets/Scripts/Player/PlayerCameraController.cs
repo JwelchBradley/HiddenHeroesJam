@@ -9,7 +9,8 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera cinemachine;
     private CinemachineBasicMultiChannelPerlin cameraShake;
     private CinemachineImpulseListener cameraShakeImpulse;
-    private float mouseSens = 1.0f;
+    public float xMouseSens = 1.0f;
+    public float yMouseSens = 1.0f;
 
     private float xRot;
     private float yRot;
@@ -36,6 +37,15 @@ public class PlayerCameraController : MonoBehaviour
     #region Functions
     private void Awake()
     {
+        if(PlayerPrefs.HasKey("X Sens"))
+        {
+            xMouseSens = PlayerPrefs.GetFloat("X Sens");
+            yMouseSens = PlayerPrefs.GetFloat("Y Sens");
+        }
+
+        yRot = transform.rotation.eulerAngles.y;
+        xRot = transform.rotation.eulerAngles.x;
+
         startingFOV = cinemachine.m_Lens.FieldOfView;
         cameraShake = cinemachine.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
     }
@@ -48,8 +58,8 @@ public class PlayerCameraController : MonoBehaviour
 
     private void CameraLook()
     {
-        yRot += Input.GetAxisRaw("Mouse X") * mouseSens;
-        xRot -= Input.GetAxisRaw("Mouse Y") * mouseSens;
+        yRot += Input.GetAxisRaw("Mouse X") * xMouseSens;
+        xRot -= Input.GetAxisRaw("Mouse Y") * yMouseSens;
 
         if(yRot > 360)
         {

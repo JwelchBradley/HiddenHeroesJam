@@ -18,7 +18,9 @@ public class InteractableDetection : MonoBehaviour
 
     private AudioSource audioSource;
     [SerializeField] private AudioClip debugSound;
+    [SerializeField] private float minTimeBetweenSounds = 0.8f;
 
+    private float timeOfLastSound = -Mathf.Infinity;
     protected Interactable hoverObject;
     private Transform mainCamera;
     #endregion
@@ -48,9 +50,13 @@ public class InteractableDetection : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
-                    if(hoverObject.TryGetComponent(out DevObjectInteractable debObj))
+                    if(timeOfLastSound + minTimeBetweenSounds < Time.time)
                     {
-                        audioSource.PlayOneShot(debugSound);
+                        if (hoverObject.TryGetComponent(out DevObjectInteractable debObj))
+                        {
+                            timeOfLastSound = Time.time;
+                            audioSource.PlayOneShot(debugSound);
+                        }
                     }
 
                     hoverObject.ClickEvent();

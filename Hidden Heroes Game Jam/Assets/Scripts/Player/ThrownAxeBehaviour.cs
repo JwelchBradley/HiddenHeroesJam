@@ -9,6 +9,7 @@
 *****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ThrownAxeBehaviour : MonoBehaviour
@@ -21,7 +22,10 @@ public class ThrownAxeBehaviour : MonoBehaviour
 
     private float spawnProtectionTime = 0.02f;
     private float spawnTime;
+    private Queue<Vector3> pastPositions = new Queue<Vector3>();
 
+    private Quaternion startingRotation;
+    private Vector3 angularVelocity = Vector3.zero;
     private AudioSource audioSource;
     private Transform playerTransform;
     private bool hasHit = false;
@@ -34,6 +38,7 @@ public class ThrownAxeBehaviour : MonoBehaviour
     private void Awake()
     {
         spawnTime = Time.time;
+        startingRotation = transform.rotation;
 
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         audioSource = GetComponent<AudioSource>();
@@ -43,7 +48,18 @@ public class ThrownAxeBehaviour : MonoBehaviour
 
     private void Start()
     {
+        angularVelocity = rigidbody.angularVelocity;
         StartCoroutine(ReturnFromOffMap());
+    }
+
+    private void FixedUpdate()
+    {
+        pastPositions.Enqueue(transform.position);
+
+        if (pastPositions.Count == 5)
+        {
+            pastPositions.Dequeue();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -72,6 +88,13 @@ public class ThrownAxeBehaviour : MonoBehaviour
                     {
                         colObj.Triggered();
                     }
+
+                    pastPositions.Dequeue();
+                    pastPositions.Dequeue();
+
+                    transform.rotation = startingRotation;
+                    transform.Rotate(transform.up, 90);
+                    transform.position = pastPositions.First();
 
                     audioSource.Stop();
 
@@ -120,6 +143,7 @@ public class ThrownAxeBehaviour : MonoBehaviour
         rigidbody.useGravity = false;
         col.enabled = true;
         isReturning = true;
+        rigidbody.angularVelocity = angularVelocity;
 
         while (true)
         {

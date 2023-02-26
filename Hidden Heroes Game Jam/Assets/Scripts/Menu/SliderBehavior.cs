@@ -48,6 +48,8 @@ public class SliderBehavior : MonoBehaviour
     [Tooltip("The audio mixer that is to be modified")]
     private AudioMixer audioMixer;
     #endregion
+
+    private PlayerCameraController cameraController;
     #endregion
 
     #region Initialize
@@ -58,16 +60,14 @@ public class SliderBehavior : MonoBehaviour
     {
         slider = GetComponent<Slider>();
 
+        cameraController = FindObjectOfType<PlayerCameraController>();
+
         InitializePlayerPrefs();
 
         if (isVolume)
         {
             SetVolume(PlayerPrefs.GetFloat(variableName));
         }        
-        else if(isSens)
-        {
-            GameObject player = GameObject.Find("Player");
-        }
     }
 
     private void InitializePlayerPrefs()
@@ -90,18 +90,15 @@ public class SliderBehavior : MonoBehaviour
                 {
                     case "X Sens":
                         PlayerPrefs.SetFloat(variableName, 1f);
+                        
+                        if(cameraController != null)
+                        cameraController.xMouseSens = 1.0f;
                         break;
                     case "Y Sens":
                         PlayerPrefs.SetFloat(variableName, 1f);
-                        break;
-                    case "X Sens Fast":
-                        PlayerPrefs.SetFloat(variableName, 1f);
-                        break;
-                    case "Y Sens Fast":
-                        PlayerPrefs.SetFloat(variableName, 1f);
-                        break;
-                    case "Sens ADS":
-                        PlayerPrefs.SetFloat(variableName, 1f);
+
+                        if (cameraController != null)
+                            cameraController.yMouseSens = 1.0f;
                         break;
                 }
             }
@@ -129,28 +126,18 @@ public class SliderBehavior : MonoBehaviour
 
         SetInputField();
 
-        /*
-        if(tpc != null)
+        if (cameraController != null)
         {
-            switch(variableName)
+            switch (variableName)
             {
                 case "X Sens":
-                    tpc.XSens = sliderValue;
+                    cameraController.xMouseSens = sliderValue;
                     break;
                 case "Y Sens":
-                    tpc.YSens = sliderValue;
-                    break;
-                case "X Sens Fast":
-                    tpc.XFastSens = sliderValue;
-                    break;
-                case "Y Sens Fast":
-                    tpc.YFastSens = sliderValue;
-                    break;
-                case "Sens ADS":
-                    tpc.ADSAimMod = sliderValue;
+                    cameraController.yMouseSens = sliderValue;
                     break;
             }
-        }*/
+        }
     }
 
     /// <summary>

@@ -23,6 +23,10 @@ public class MenuBehavior : MonoBehaviour
 
     [Tooltip("The master audio mixer")]
     [SerializeField] protected AudioMixer audioMixer;
+
+    [SerializeField] private float minTimeBetweenAudio = 0.7f;
+
+    private List<AudioSource> blackListAudioSource = new List<AudioSource>();
     #endregion
 
     #region Functions
@@ -72,7 +76,19 @@ public class MenuBehavior : MonoBehaviour
 
     public void PlayAudio(AudioSource audio)
     {
-        audio.PlayOneShot(audio.clip);
+        if (!blackListAudioSource.Contains(audio))
+        {
+            blackListAudioSource.Add(audio);
+            StartCoroutine(DelayAudio(audio));
+            audio.PlayOneShot(audio.clip);
+        }
+    }
+
+    private IEnumerator DelayAudio(AudioSource audio)
+    {
+        yield return new WaitForSeconds(minTimeBetweenAudio);
+
+        blackListAudioSource.Remove(audio);
     }
 
     #region Loading Scenes
