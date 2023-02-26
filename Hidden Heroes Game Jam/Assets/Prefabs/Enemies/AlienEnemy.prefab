@@ -81,6 +81,7 @@ MonoBehaviour:
   shootSounds:
   - {fileID: 8300000, guid: 26a5c19cc796fcb4d8246d44a08fa0d6, type: 3}
   - {fileID: 8300000, guid: cd6c01293d77a534781d83d8cf3d381d, type: 3}
+  - {fileID: 8300000, guid: dfb212896e317d74e93279cd044db434, type: 3}
 --- !u!136 &5489479343935696084
 CapsuleCollider:
   m_ObjectHideFlags: 0
