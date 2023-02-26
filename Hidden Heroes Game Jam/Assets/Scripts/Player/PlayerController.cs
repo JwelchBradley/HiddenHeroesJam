@@ -9,7 +9,6 @@ public class PlayerController : Damageable
     private Weapon weapon;
     [SerializeField] private bool startWithAxe = true;
 
-    string currentScene;
 
     private GameObject Discord;
     bool DiscordOn = false;
@@ -20,8 +19,6 @@ public class PlayerController : Damageable
     protected override void Awake()
     {
         base.Awake();
-
-        currentScene = SceneManager.GetActiveScene().ToString();
 
         if (startWithAxe)
         {
@@ -107,7 +104,7 @@ public class PlayerController : Damageable
     {
         if (collision.gameObject.tag == "Hazards")
         {
-            SceneManager.LoadScene(currentScene);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
     #endregion
