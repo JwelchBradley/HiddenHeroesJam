@@ -2568,7 +2568,7 @@ GameObject:
   - component: {fileID: 584591769}
   - component: {fileID: 584591768}
   - component: {fileID: 584591767}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spawns (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4415,7 +4415,7 @@ GameObject:
   - component: {fileID: 1028723340}
   - component: {fileID: 1028723339}
   - component: {fileID: 1028723338}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spawns (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4525,6 +4525,10 @@ PrefabInstance:
     - target: {fileID: 546272238, guid: a01d69c8fa1e9d5449b45546d4a51ba7, type: 3}
       propertyPath: m_TagString
       value: ZavidRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 546272240, guid: a01d69c8fa1e9d5449b45546d4a51ba7, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 579713293, guid: a01d69c8fa1e9d5449b45546d4a51ba7, type: 3}
       propertyPath: m_Mesh
@@ -5412,7 +5416,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 10
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -6181,7 +6185,7 @@ GameObject:
   - component: {fileID: 1404551102}
   - component: {fileID: 1404551101}
   - component: {fileID: 1404551100}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spawns (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6692,7 +6696,7 @@ GameObject:
   - component: {fileID: 1481296710}
   - component: {fileID: 1481296709}
   - component: {fileID: 1481296713}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7077,7 +7081,7 @@ GameObject:
   - component: {fileID: 1509206016}
   - component: {fileID: 1509206015}
   - component: {fileID: 1509206014}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spawns (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8121,7 +8125,7 @@ GameObject:
   - component: {fileID: 1821486218}
   - component: {fileID: 1821486217}
   - component: {fileID: 1821486216}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: spawns (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

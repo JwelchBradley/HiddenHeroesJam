@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5676891345110250502}
   - component: {fileID: 3432799681743734834}
   - component: {fileID: -2147070443511615421}
+  - component: {fileID: 8394830466547884411}
   m_Layer: 0
   m_Name: ZavidDabzug 1
   m_TagString: Enemy
@@ -128,7 +129,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d1d64d2d860bb124fb1b480969f6dabd, type: 3}
   HealthChangeEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8394830466547884411}
+        m_TargetAssemblyTypeName: LoadMainMenuOnDeath, Assembly-CSharp
+        m_MethodName: CheckIfDead
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   isDead: 0
 --- !u!82 &3432799681743734834
 AudioSource:
@@ -243,6 +256,20 @@ MonoBehaviour:
   normalSprites: []
   greenSprites: []
   invisColor: {r: 0, g: 0, b: 0, a: 0}
+  greenMat: {fileID: 0}
+  cruncher: {fileID: 0}
+--- !u!114 &8394830466547884411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2166230941864369550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adacec5d0a3f87f48baa7b798218014f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2804975805397135347
 GameObject:
   m_ObjectHideFlags: 0
