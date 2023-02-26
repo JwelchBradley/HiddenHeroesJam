@@ -24,6 +24,8 @@ public class PlayerController : Damageable
         base.Awake();
 
         Discord = GameObject.Find("Discord");
+
+        if(Discord != null)
         Discord.SetActive(false);
 
         cameraShakeSource = GetComponent<CinemachineImpulseSource>();
