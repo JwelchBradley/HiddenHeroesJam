@@ -16,6 +16,9 @@ public class InteractableDetection : MonoBehaviour
     #region Fields
     private const string interactableTag = "Interactable";
 
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip debugSound;
+
     protected Interactable hoverObject;
     private Transform mainCamera;
     #endregion
@@ -23,6 +26,7 @@ public class InteractableDetection : MonoBehaviour
     #region Functions
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         mainCamera = Camera.main.transform;
     }
 
@@ -44,6 +48,11 @@ public class InteractableDetection : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    if(hoverObject.TryGetComponent(out DevObjectInteractable debObj))
+                    {
+                        audioSource.PlayOneShot(debugSound);
+                    }
+
                     hoverObject.ClickEvent();
                 }
             }

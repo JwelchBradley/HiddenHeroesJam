@@ -19,6 +19,10 @@ public class ThrownAxeBehaviour : MonoBehaviour
     [HideInInspector] public float returningForce;
     [HideInInspector] public float timeBeforeGaruanteedReturn;
 
+    private float spawnProtectionTime = 0.02f;
+    private float spawnTime;
+
+    private AudioSource audioSource;
     private Transform playerTransform;
     private bool hasHit = false;
     private bool isReturning = false;
@@ -29,7 +33,10 @@ public class ThrownAxeBehaviour : MonoBehaviour
     #region Functions
     private void Awake()
     {
+        spawnTime = Time.time;
+
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        audioSource = GetComponent<AudioSource>();
         rigidbody = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
     }
@@ -45,13 +52,15 @@ public class ThrownAxeBehaviour : MonoBehaviour
         {
             other.gameObject.GetComponent<Damageable>().UpdateHealth(-damage);
         }
-        else
+        else if(spawnTime+spawnProtectionTime < Time.time)
         {
             if (isReturning)
             {
                 if (other.gameObject.CompareTag("Player"))
                 {
-                    FindObjectOfType<AxeWeapon>().ShowClub(true);
+                    var axeWeapon = FindObjectOfType<AxeWeapon>();
+                    axeWeapon.ShowClub(true);
+                    axeWeapon.ReturnSound();
                     Destroy(gameObject);
                 }
             }
@@ -63,6 +72,8 @@ public class ThrownAxeBehaviour : MonoBehaviour
                     {
                         colObj.Triggered();
                     }
+
+                    audioSource.Stop();
 
                     Return();
                     StartCoroutine(WaitToReturn());
@@ -103,6 +114,8 @@ public class ThrownAxeBehaviour : MonoBehaviour
 
     private IEnumerator ReturningRoutine()
     {
+        audioSource.Play();
+
         rigidbody.constraints = RigidbodyConstraints.None;
         rigidbody.useGravity = false;
         col.enabled = true;

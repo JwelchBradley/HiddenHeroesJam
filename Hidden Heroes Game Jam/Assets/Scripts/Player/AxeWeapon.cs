@@ -10,6 +10,7 @@ public class AxeWeapon : Weapon
 
     #region Melee
     [Header("Melee")]
+    [SerializeField] private AudioClip meleeSound;
     [SerializeField] private float timeBetweenSwings = 0.5f;
     [SerializeField] private float meleeRange = 1.0f;
     [SerializeField] private float meleeDamage = 1.0f;
@@ -30,6 +31,8 @@ public class AxeWeapon : Weapon
 
     #region Throwing
     [Header("Thrown Axe")]
+    [SerializeField] private AudioClip throwSound;
+    [SerializeField] private AudioClip catchSound;
     [SerializeField] private GameObject thrownAxePrefab;
     [SerializeField] private float thrownDamage = 1.0f;
 
@@ -78,8 +81,8 @@ public class AxeWeapon : Weapon
 
     private GameObject club;
     private Animator clubAnimator;
-
     private Animator davidFaceAnimator;
+    private AudioSource audioSource;
 
     private ThrownAxeBehaviour thrownAxeBehaviour;
     private bool isAiming = false;
@@ -90,6 +93,7 @@ public class AxeWeapon : Weapon
     private void Awake()
     {
         impulseSource = GetComponent<CinemachineImpulseSource>();
+        audioSource = GetComponent<AudioSource>();
 
         club = GameObject.FindGameObjectWithTag("Club");
         club.GetComponent<SpriteRenderer>().enabled = true;
@@ -122,6 +126,9 @@ public class AxeWeapon : Weapon
     private void Melee()
     {
         timeOfLastSwing = Time.time;
+
+        if(meleeSound != null)
+        audioSource.PlayOneShot(meleeSound);
 
         impulseSource.GenerateImpulse();
         StartCoroutine(AttackFace());
@@ -210,6 +217,8 @@ public class AxeWeapon : Weapon
 
     private void ThrowAxe()
     {
+        audioSource.PlayOneShot(throwSound);
+
         var thrownAxe = Instantiate(thrownAxePrefab, transform.position, transform.rotation);
         var axRb = thrownAxe.GetComponent<Rigidbody>();
         axRb.AddForce(transform.forward * throwForce);
@@ -232,6 +241,11 @@ public class AxeWeapon : Weapon
     public void ShowClub(bool shouldShow)
     {
         club.SetActive(shouldShow);
+    }
+
+    public void ReturnSound()
+    {
+        audioSource.PlayOneShot(catchSound);
     }
 
     #region Zoom
