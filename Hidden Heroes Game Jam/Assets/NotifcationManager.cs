@@ -5,23 +5,15 @@ using UnityEngine.UI;
 
 public class NotifcationManager : MonoBehaviour
 {
-    
-
     public GameObject DiscordHUD;
     public NarrativeBehaviour Manager;
-    
+    [SerializeField] private AudioClip discordPing;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+    private AudioSource audioSource;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
-          
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,6 +22,8 @@ public class NotifcationManager : MonoBehaviour
         {
             if (other.gameObject.tag == "Player")
             {
+                audioSource.PlayOneShot(discordPing);
+
                 Manager.AddCounter();
                 DiscordHUD.gameObject.SetActive(true);
 
