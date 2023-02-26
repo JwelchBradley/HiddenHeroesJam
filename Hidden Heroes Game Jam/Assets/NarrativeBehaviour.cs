@@ -23,7 +23,7 @@ public class NarrativeBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheckCounter();
     }
 
     public void AddCounter()
