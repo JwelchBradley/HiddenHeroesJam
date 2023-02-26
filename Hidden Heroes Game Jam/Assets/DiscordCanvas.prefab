@@ -140,7 +140,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_TargetDisplay: 0
 --- !u!114 &4329475233034982710
 MonoBehaviour:
@@ -302,7 +302,7 @@ PrefabInstance:
     - target: {fileID: 4478675288479892922, guid: d29a7ac74c19f4ca7aa35f4a52aff86f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d29a7ac74c19f4ca7aa35f4a52aff86f, type: 3}

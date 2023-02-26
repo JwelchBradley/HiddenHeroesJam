@@ -13,7 +13,7 @@ public class PlayerController : Damageable
     private CinemachineImpulseSource cameraShakeSource;
     private Coroutine deathRoutine;
 
-    public GameObject Discord;
+    private GameObject Discord;
     bool DiscordOn = false;
     #endregion
 
@@ -22,6 +22,9 @@ public class PlayerController : Damageable
     protected override void Awake()
     {
         base.Awake();
+
+        Discord = GameObject.Find("Discord");
+        Discord.SetActive(false);
 
         cameraShakeSource = GetComponent<CinemachineImpulseSource>();
 
@@ -91,21 +94,12 @@ public class PlayerController : Damageable
 
     private void OpenDiscord()
     {
-        if (Discord == null) return;
-
-        if (Input.GetKeyDown(KeyCode.Tab) && DiscordOn == false)
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-            Discord.SetActive(true);
-            DiscordOn = true;
-        }
+            if (Discord == null) return;
 
-        else if (Input.GetKeyDown(KeyCode.Tab) && DiscordOn == true)
-        {
-            Discord.SetActive(false);
-            DiscordOn = false;
+            Discord.SetActive(!Discord.activeSelf);
         }
-         
-        
     }
 
     public override void UpdateHealth(float healthMod)
