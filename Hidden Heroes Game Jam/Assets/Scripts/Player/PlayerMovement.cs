@@ -94,6 +94,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (!col.gameObject.CompareTag("Player"))
                 {
+                    clubAnimator.SetTrigger("Jump");
+
                     var vel = rigidbody.velocity;
                     vel.y = jumpVelocity;
                     rigidbody.velocity = vel;
