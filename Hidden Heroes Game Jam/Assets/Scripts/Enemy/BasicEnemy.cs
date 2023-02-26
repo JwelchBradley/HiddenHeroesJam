@@ -9,7 +9,8 @@ public class BasicEnemy : MonoBehaviour
     {
         COMING,
         DODGING,
-        SHOOTING
+        SHOOTING,
+        STUNNED
     }
 
     public bool UFO;
@@ -30,6 +31,7 @@ public class BasicEnemy : MonoBehaviour
     Rigidbody rb;
 
     public float bulletSpeed;
+    public GameObject muzzle;
     public GameObject bullet;
 
     // Start is called before the first frame update
@@ -88,12 +90,16 @@ public class BasicEnemy : MonoBehaviour
                     Shoot();
 
                 break;
+            case MoveState.STUNNED:
+                if (Time.time > stateTimer)
+                    state = MoveState.COMING;
+                break;
         }
     }
 
     void Shoot()
     {
-        GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
+        GameObject newBullet = Instantiate(bullet, muzzle.transform.position, transform.rotation);
         newBullet.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
         state = MoveState.DODGING;
         if(UFO)
@@ -101,5 +107,13 @@ public class BasicEnemy : MonoBehaviour
         dodgeRight = System.Convert.ToBoolean(Random.Range(0, 2));
         stateTimer = Time.time + dodgeLength;
         shootTimer = Time.time + shootCooldown;
+    }
+
+    public void Knockback(float force, float stunTime = 1f)
+    {
+        stateTimer = Time.time + stunTime;
+        state = MoveState.STUNNED;
+
+        rb.AddForce(transform.forward * -force);
     }
 }
