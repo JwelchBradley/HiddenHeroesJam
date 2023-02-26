@@ -121,7 +121,7 @@ public class ZavidDabzug : MonoBehaviour
     {
         GoInvinc();
         yield return new WaitForSeconds(1f);
-        InvokeRepeating("SpawnCruncher", 0f, 1f);
+        InvokeRepeating("SpawnCruncher", 0f, 2.5f);
         NotInvinc();
         enemy.enabled = true;
     }
