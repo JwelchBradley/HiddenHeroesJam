@@ -5,38 +5,37 @@ using UnityEngine.UI;
 
 public class NotifcationManager : MonoBehaviour
 {
-    public Text notficationText;
-    private static NotifcationManager instance;
+    
+
+    public GameObject DiscordHUD;
+    public GameObject Manager;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-            StartNotification();
-        } 
-           
         
           
     }
 
-
-    public static void StartNotification()
+    private void OnTriggerEnter(Collider other)
     {
-        instance.StartCoroutine(instance.sendNotification("New Message, Press D to open.", 5));
+        if (this.enabled)
+        {
+            if (other.gameObject.tag == "Player")
+            {
+                Manager.gameObject.GetComponent<NarrativeBehaviour>().AddCounter();
+                DiscordHUD.gameObject.SetActive(true);
+            }
+        }
+
+        this.enabled = false;
     }
 
-     private IEnumerator sendNotification(string text, int time)
-    {
-        notficationText.text = text;
-        yield return new WaitForSeconds(time);
-        notficationText.text = "";
-    }
 }
