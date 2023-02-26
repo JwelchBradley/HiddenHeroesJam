@@ -164,7 +164,7 @@ public class AxeWeapon : Weapon
                 }
                 else
                 {
-                    damageable.gameObject.GetComponent<BasicEnemy>().Knockback(knockbackForce, 0.3f);
+                    damageable.gameObject.GetComponent<BasicEnemy>().Knockback(knockbackForce, knockbackDuration);
                 }
             }
         }

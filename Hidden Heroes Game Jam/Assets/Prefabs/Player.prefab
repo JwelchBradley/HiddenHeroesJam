@@ -53,9 +53,9 @@ MonoBehaviour:
   holdInputRefTime: 0.25
   meleeSound: {fileID: 0}
   timeBetweenSwings: 0.5
-  meleeRange: 6
+  meleeRange: 4
   meleeDamage: 50
-  knockbackForce: 30
+  knockbackForce: 10
   meleeCameraShakeFrequency: 100
   meleeCameraShakeDuration: 0.5
   throwSound: {fileID: 8300000, guid: ce279d022774a5040a5836df1a572d2e, type: 3}
@@ -64,7 +64,7 @@ MonoBehaviour:
     type: 3}
   thrownDamage: 50
   throwForce: 1500
-  knockbackDuration: 0.8
+  knockbackDuration: 0.4
   throwUpForce: 100
   throwRotation: 15
   returningForce: 60
@@ -594,7 +594,6 @@ MonoBehaviour:
       m_Calls: []
   isDead: 0
   startWithAxe: 1
-  Discord: {fileID: 4478675288479892922, guid: d29a7ac74c19f4ca7aa35f4a52aff86f, type: 3}
 --- !u!95 &659967977093692089
 Animator:
   serializedVersion: 4

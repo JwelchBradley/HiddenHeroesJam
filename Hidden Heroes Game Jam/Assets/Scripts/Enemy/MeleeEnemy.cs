@@ -53,7 +53,7 @@ public class MeleeEnemy : MonoBehaviour
 
     public void Knockback(float force, float stunTime = 1f)
     {
-        jumpTimer = Time.time + stunTime;
+        stunTimer = Time.time + stunTime;
 
         rb.velocity = transform.forward * -force;
     }
