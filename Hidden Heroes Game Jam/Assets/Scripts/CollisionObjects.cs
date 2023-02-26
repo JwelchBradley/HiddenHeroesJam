@@ -22,6 +22,8 @@ public class CollisionObjects : MonoBehaviour
     #region Functions
     public void Triggered()
     {
+        Debug.Log("print");
+
         if (enabled)
         {
             foreach (GameObject spawn in spawns)

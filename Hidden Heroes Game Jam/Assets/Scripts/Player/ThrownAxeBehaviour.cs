@@ -59,6 +59,11 @@ public class ThrownAxeBehaviour : MonoBehaviour
             {
                 if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Ax"))
                 {
+                    if(other.gameObject.TryGetComponent(out CollisionObjects colObj))
+                    {
+                        colObj.Triggered();
+                    }
+
                     Return();
                     StartCoroutine(WaitToReturn());
                 }

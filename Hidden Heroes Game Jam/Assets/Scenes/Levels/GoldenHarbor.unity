@@ -349,6 +349,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5024440720183019756, guid: 51e57dd88e98f944faefbb872bfaa107,
+        type: 3}
+      propertyPath: field of view
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 5024440720183019758, guid: 51e57dd88e98f944faefbb872bfaa107,
         type: 3}
       propertyPath: m_Name
@@ -765,6 +770,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1090158597, guid: 660e534382cd3b84298a4ac8f23a0529, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207548172, guid: 660e534382cd3b84298a4ac8f23a0529, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 148525791322030019, guid: 660e534382cd3b84298a4ac8f23a0529,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2091895101914705690, guid: 660e534382cd3b84298a4ac8f23a0529,
         type: 3}
       propertyPath: m_Mesh
@@ -903,6 +921,16 @@ PrefabInstance:
     - target: {fileID: 2091895103854989431, guid: 660e534382cd3b84298a4ac8f23a0529,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3197524549593636803, guid: 660e534382cd3b84298a4ac8f23a0529,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6797628296529319987, guid: 660e534382cd3b84298a4ac8f23a0529,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
