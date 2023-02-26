@@ -50,11 +50,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   davidAttackFaceTime: 0.5
   bloodyClub: {fileID: -102222614, guid: 61c7dd2bf987b4a6b9757a68cb3b88c8, type: 3}
+  holdInputRefTime: 0.25
   meleeSound: {fileID: 0}
   timeBetweenSwings: 0.5
   meleeRange: 6
   meleeDamage: 50
-  knockbackForce: 100
+  knockbackForce: 30
   meleeCameraShakeFrequency: 100
   meleeCameraShakeDuration: 0.5
   throwSound: {fileID: 8300000, guid: ce279d022774a5040a5836df1a572d2e, type: 3}
@@ -626,6 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugSound: {fileID: 8300000, guid: 405ce149c888e824e865f72683341ea0, type: 3}
+  minTimeBetweenSounds: 0.8
 --- !u!82 &9076828354349068645
 AudioSource:
   m_ObjectHideFlags: 0
@@ -769,6 +771,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cinemachine: {fileID: 8035747207123605886}
+  xMouseSens: 1
+  yMouseSens: 1
 --- !u!1 &8035747206814136689
 GameObject:
   m_ObjectHideFlags: 0

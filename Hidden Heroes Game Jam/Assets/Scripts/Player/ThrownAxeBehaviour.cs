@@ -69,15 +69,15 @@ public class ThrownAxeBehaviour : MonoBehaviour
             var damageable = other.gameObject.GetComponent<Damageable>();
             damageable.UpdateHealth(-damage);
 
-            var force = isReturning ? -100 : 100;
+            var force = isReturning ? -25 : 25;
 
             if (damageable.gameObject.TryGetComponent(out MeleeEnemy enemy))
             {
-                enemy.Knockback(force, 1.0f);
+                enemy.Knockback(force, 0.8f);
             }
             else
             {
-                damageable.gameObject.GetComponent<BasicEnemy>().Knockback(force, 1.0f);
+                damageable.gameObject.GetComponent<BasicEnemy>().Knockback(force, 0.8f);
             }
         }
         else if(spawnTime+spawnProtectionTime < Time.time)

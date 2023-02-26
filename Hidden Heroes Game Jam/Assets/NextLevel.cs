@@ -22,25 +22,31 @@ public class NextLevel : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (levelName == "DavidsHouse")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("DavidsHouse");
-        }
-        else if (levelName == "GoldenHarbor")
-        {
-            SceneManager.LoadScene("GoldenHarbor");
-        }
-        else if (levelName == "MechLevel")
-        {
-            SceneManager.LoadScene("MechLevel");
-        }
-        else if (levelName == "Evilition")
-        {
-            SceneManager.LoadScene("Evilition");
-        }
-        else
-        {
-            SceneManager.LoadScene("FinalBoss");
+            FindObjectOfType<MenuBehavior>().LoadScene(levelName);
+
+            /*
+            if (levelName == "DavidsHouse")
+            {
+                SceneManager.LoadScene("DavidsHouse");
+            }
+            else if (levelName == "GoldenHarbor")
+            {
+                SceneManager.LoadScene("GoldenHarbor");
+            }
+            else if (levelName == "MechLevel")
+            {
+                SceneManager.LoadScene("MechLevel");
+            }
+            else if (levelName == "Evilition")
+            {
+                SceneManager.LoadScene("Evilition");
+            }
+            else
+            {
+                SceneManager.LoadScene("FinalBoss");
+            }*/
         }
     }
     #endregion

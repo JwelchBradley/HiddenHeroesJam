@@ -100,6 +100,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Enemy")) return;
+
         foreach (ContactPoint contact in collision.contacts)
         {
             if (Vector3.Angle(contact.normal, Vector3.up) < maxSlope)
