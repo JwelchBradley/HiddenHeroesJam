@@ -5,6 +5,8 @@ using UnityEngine;
 public class AxeWeapon : Weapon
 {
     #region Fields
+    [SerializeField] private float davidAttackFaceTime = 0.5f;
+
     #region Melee
     [Header("Melee")]
     [SerializeField] private float timeBetweenSwings = 0.5f;
@@ -64,6 +66,11 @@ public class AxeWeapon : Weapon
     private PlayerCameraController cameraController;
     #endregion
 
+    private GameObject club;
+    private Animator clubAnimator;
+
+    private Animator davidFaceAnimator;
+
     private ThrownAxeBehaviour thrownAxeBehaviour;
     private bool isAiming = false;
     #endregion
@@ -72,10 +79,19 @@ public class AxeWeapon : Weapon
     #region Functions
     private void Awake()
     {
+        club = GameObject.FindGameObjectWithTag("Club");
+        club.GetComponent<SpriteRenderer>().enabled = true;
+        clubAnimator = club.GetComponent<Animator>();
+
         meleeCollider = GetComponent<BoxCollider>();
         meleeCollider.size = new Vector3(2, 2, meleeRange);
         meleeCollider.center = new Vector3(0, 0, meleeRange / 2);
         cameraController = FindObjectOfType<PlayerCameraController>();
+    }
+
+    private void Start()
+    {
+        davidFaceAnimator = FindObjectOfType<DavidFace>().anim;
     }
 
     #region Melee
@@ -95,10 +111,22 @@ public class AxeWeapon : Weapon
     {
         timeOfLastSwing = Time.time;
 
+        StartCoroutine(AttackFace());
+        clubAnimator.SetTrigger("melee");
+
         foreach (Damageable damageable in enemiesInMelee)
         {
             damageable.UpdateHealth(-meleeDamage);
         }
+    }
+
+    private IEnumerator AttackFace()
+    {
+        davidFaceAnimator.SetBool("Attacking", true);
+
+        yield return new WaitForSeconds(davidAttackFaceTime);
+
+        davidFaceAnimator.SetBool("Attacking", false);
     }
 
     #region Melee Finding Enemies
@@ -180,7 +208,15 @@ public class AxeWeapon : Weapon
         thrownAxeBehaviour.returningForce = returningForce;
         thrownAxeBehaviour.timeBeforeGaruanteedReturn = timeBeforeGaruanteedReturn;
 
+        StartCoroutine(AttackFace());
+        club.SetActive(false);
+
         StopAiming();
+    }
+
+    public void ShowClub(bool shouldShow)
+    {
+        club.SetActive(shouldShow);
     }
 
     #region Zoom
@@ -195,7 +231,10 @@ public class AxeWeapon : Weapon
 
     private IEnumerator ZoomRoutine(float speed, int mod)
     {
-        var goal = mod == 1 ? aimZoom : 1;
+        bool isZoomingIn = mod == 1;
+        var goal = isZoomingIn ? aimZoom : 1;
+
+        clubAnimator.SetBool("isWindingUp", isZoomingIn);
 
         while (currentZoom != goal)
         {

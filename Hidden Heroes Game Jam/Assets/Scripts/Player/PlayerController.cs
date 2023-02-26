@@ -22,6 +22,10 @@ public class PlayerController : Damageable
         {
             GetAxe();
         }
+        else
+        {
+            RemoveAxe();
+        }
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -30,6 +34,11 @@ public class PlayerController : Damageable
 
         if(healthBar != null)
         HealthChangeEvent.AddListener(healthBar.GetComponent<HealthBarHandler>().UpdateHealthBar);
+    }
+
+    public void RemoveAxe()
+    {
+        GetComponentInChildren<AxeWeapon>().ShowClub(false);
     }
 
     public void GetAxe()

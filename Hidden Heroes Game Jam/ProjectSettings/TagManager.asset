@@ -8,6 +8,8 @@ TagManager:
   - DevObj
   - Ax
   - Interactable
+  - Hazards
+  - Club
   layers:
   - Default
   - TransparentFX
