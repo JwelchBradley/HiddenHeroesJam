@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8550457275853988949}
   - component: {fileID: 8550457275853988954}
+  - component: {fileID: 5038594510554213146}
   m_Layer: 0
   m_Name: BugBody
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8550457275853988948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8550457276536429578}
@@ -85,6 +86,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5038594510554213146
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8550457275853988948}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 24c21d3e518b44cb9ae6b2eb6afa9455, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8550457276536429568
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +203,7 @@ MonoBehaviour:
   jumpWait: 1
   jumpLength: 1
   extraGravity: 10
+  sprites: []
 --- !u!111 &8550457276536429579
 Animation:
   m_ObjectHideFlags: 0
@@ -339,7 +361,7 @@ PrefabInstance:
     - target: {fileID: 7019054013762608413, guid: b1af8e2f0a94cd049844a9a109b372eb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.79
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7019054013762608413, guid: b1af8e2f0a94cd049844a9a109b372eb,
         type: 3}
