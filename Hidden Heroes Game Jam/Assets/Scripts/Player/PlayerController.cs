@@ -98,6 +98,11 @@ public class PlayerController : Damageable
     {
         if (Input.GetKeyDown(KeyCode.Tab))
         {
+            if (Discord == null)
+            {
+                Discord = GameObject.Find("Discord");
+            }
+
             if (Discord == null) return;
 
             Discord.SetActive(!Discord.activeSelf);
