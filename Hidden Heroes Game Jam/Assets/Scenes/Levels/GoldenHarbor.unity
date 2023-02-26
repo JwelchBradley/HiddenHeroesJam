@@ -123,6 +123,115 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &63193909
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 844643558209414288, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 1655578865}
+    - target: {fileID: 844643558209414288, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: DiscordHUD
+      value: 
+      objectReference: {fileID: 867048015}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 62.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.264
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414292, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.8264232
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414292, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.308619
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414292, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.35127336
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414292, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.15660231
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414292, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -1.1543103
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414292, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.10291624
+      objectReference: {fileID: 0}
+    - target: {fileID: 844643558209414293, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: m_Name
+      value: TextZone (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1312edc1c611941a8b19196e9c285a9d, type: 3}
 --- !u!1 &100031275
 GameObject:
   m_ObjectHideFlags: 0
