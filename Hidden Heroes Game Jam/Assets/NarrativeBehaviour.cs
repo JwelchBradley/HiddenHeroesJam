@@ -6,7 +6,7 @@ public class NarrativeBehaviour : MonoBehaviour
 {
     public GameObject Discord;
 
-    public int Counter = 1;
+    public int Counter = 0;
 
     public GameObject T1;
     public GameObject T2;
