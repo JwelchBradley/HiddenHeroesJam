@@ -7,6 +7,7 @@ public class AxeWeapon : Weapon
 {
     #region Fields
     [SerializeField] private float davidAttackFaceTime = 0.5f;
+    [SerializeField] private Sprite bloodyClub;
 
     #region Melee
     [Header("Melee")]
@@ -137,7 +138,19 @@ public class AxeWeapon : Weapon
         foreach (Damageable damageable in enemiesInMelee)
         {
             if(damageable != null)
-            damageable.UpdateHealth(-meleeDamage);
+            {
+                damageable.UpdateHealth(-meleeDamage);
+                club.GetComponent<SpriteRenderer>().sprite = bloodyClub;
+
+                if (damageable.gameObject.TryGetComponent(out MeleeEnemy enemy))
+                {
+                    enemy.Knockback(knockbackForce, 0.3f);
+                }
+                else
+                {
+                    damageable.gameObject.GetComponent<BasicEnemy>().Knockback(knockbackForce, 0.3f);
+                }
+            }
         }
     }
 
