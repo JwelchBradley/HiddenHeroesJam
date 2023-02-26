@@ -10,8 +10,13 @@ PrefabInstance:
     - target: {fileID: -2147070443511615421, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
       propertyPath: phase
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -2147070443511615421, guid: 25b94bfdcc32e40c08b2c720559fc819,
+        type: 3}
+      propertyPath: greenMat
+      value: 
+      objectReference: {fileID: 2100000, guid: b418569f0f9d34fafa1e3e9884133b06, type: 2}
     - target: {fileID: -2147070443511615421, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
       propertyPath: invisColor.a
@@ -31,6 +36,11 @@ PrefabInstance:
         type: 3}
       propertyPath: invisColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2147070443511615421, guid: 25b94bfdcc32e40c08b2c720559fc819,
+        type: 3}
+      propertyPath: roomMeshes.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -2147070443511615421, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
@@ -81,7 +91,7 @@ PrefabInstance:
     - target: {fileID: 2166230941864369550, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
       propertyPath: m_Name
-      value: ZavidDabzug 2
+      value: ZavidDabzug 3
       objectReference: {fileID: 0}
     - target: {fileID: 2166230941864369555, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
@@ -142,12 +152,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e1039597e27a076409ddb650e99adf94, type: 3}
+      objectReference: {fileID: 8300000, guid: f700cf8bb42bf1648adf32649a74cd49, type: 3}
     - target: {fileID: 5676891345110250502, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
       propertyPath: corpse
       value: 
-      objectReference: {fileID: 418750032862112066, guid: 4a2176727121d41b0b24cc431b829517,
+      objectReference: {fileID: 418750032862112066, guid: 5caca7c5b10664652a265b967837a239,
         type: 3}
     - target: {fileID: 5676891345110250502, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
@@ -159,5 +169,21 @@ PrefabInstance:
       propertyPath: hurtSounds.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: eb1fa3010ff7f6148b618fa76d55e91f, type: 3}
+    - target: {fileID: 6461822528096961079, guid: 25b94bfdcc32e40c08b2c720559fc819,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1471657298, guid: 4207be480932b4e4cbe6ad140e6e369f,
+        type: 3}
+    - target: {fileID: 6461822528096961079, guid: 25b94bfdcc32e40c08b2c720559fc819,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461822528096961079, guid: 25b94bfdcc32e40c08b2c720559fc819,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25b94bfdcc32e40c08b2c720559fc819, type: 3}

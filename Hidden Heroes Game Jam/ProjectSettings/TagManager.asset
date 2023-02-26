@@ -11,6 +11,7 @@ TagManager:
   - Hazards
   - Club
   - pipes
+  - ZavidRoom
   layers:
   - Default
   - TransparentFX

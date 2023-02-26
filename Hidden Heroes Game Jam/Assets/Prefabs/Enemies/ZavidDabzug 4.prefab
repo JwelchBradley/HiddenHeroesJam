@@ -10,8 +10,14 @@ PrefabInstance:
     - target: {fileID: -2147070443511615421, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
       propertyPath: phase
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: -2147070443511615421, guid: 25b94bfdcc32e40c08b2c720559fc819,
+        type: 3}
+      propertyPath: cruncher
+      value: 
+      objectReference: {fileID: 8550457276536429568, guid: 835e5fde001ce4956ad9405073577e0c,
+        type: 3}
     - target: {fileID: -2147070443511615421, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
       propertyPath: invisColor.a
@@ -81,7 +87,7 @@ PrefabInstance:
     - target: {fileID: 2166230941864369550, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
       propertyPath: m_Name
-      value: ZavidDabzug 2
+      value: ZavidDabzug 4
       objectReference: {fileID: 0}
     - target: {fileID: 2166230941864369555, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
@@ -142,12 +148,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e1039597e27a076409ddb650e99adf94, type: 3}
+      objectReference: {fileID: 8300000, guid: aead4795ee529404d8819f418305cedb, type: 3}
     - target: {fileID: 5676891345110250502, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
       propertyPath: corpse
       value: 
-      objectReference: {fileID: 418750032862112066, guid: 4a2176727121d41b0b24cc431b829517,
+      objectReference: {fileID: 2166230941864369550, guid: bbb63955c6ff349d69a1926083a58130,
         type: 3}
     - target: {fileID: 5676891345110250502, guid: 25b94bfdcc32e40c08b2c720559fc819,
         type: 3}
@@ -159,5 +165,21 @@ PrefabInstance:
       propertyPath: hurtSounds.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: eb1fa3010ff7f6148b618fa76d55e91f, type: 3}
+    - target: {fileID: 6461822528096961079, guid: 25b94bfdcc32e40c08b2c720559fc819,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1471657298, guid: 4207be480932b4e4cbe6ad140e6e369f,
+        type: 3}
+    - target: {fileID: 6461822528096961079, guid: 25b94bfdcc32e40c08b2c720559fc819,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6461822528096961079, guid: 25b94bfdcc32e40c08b2c720559fc819,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25b94bfdcc32e40c08b2c720559fc819, type: 3}

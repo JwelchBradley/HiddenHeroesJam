@@ -107,13 +107,13 @@ TextureImporter:
       name: evil_david_white_sheet_0
       rect:
         serializedVersion: 2
-        x: 147
-        y: 936
-        width: 8
-        height: 8
+        x: 98
+        y: 40
+        width: 398
+        height: 887
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -212,12 +212,12 @@ TextureImporter:
       name: evil_david_white_sheet_5
       rect:
         serializedVersion: 2
-        x: 710
+        x: 711
         y: 28
         width: 487
         height: 900
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -279,8 +279,8 @@ TextureImporter:
         y: 37
         width: 396
         height: 883
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
