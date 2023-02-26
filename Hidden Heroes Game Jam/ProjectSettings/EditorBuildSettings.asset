@@ -24,9 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/GoldenHarbor.unity
     guid: d064e1ef092b800408a55a8ff917aacf
   - enabled: 1
-    path: Assets/Scenes/Levels/MechFlyover.unity
-    guid: 88ec811fbf2485b4781783d016aed508
-  - enabled: 1
     path: Assets/Scenes/Level Select.unity
     guid: e36127cae4a462e4cac514ba525c0db7
+  - enabled: 1
+    path: Assets/Scenes/Levels/MechLevel.unity
+    guid: d31ac7afb97af4e0081850aacf2a8714
   m_configObjects: {}

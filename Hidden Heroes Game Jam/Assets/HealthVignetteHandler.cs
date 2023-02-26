@@ -45,16 +45,21 @@ public class HealthVignetteHandler : MonoBehaviour
             vignetteRoutine = null;
         }
 
-        if(lastHealth > currentHealth)
-        vignetteRoutine = StartCoroutine(HealthVignetteUpdate(currentHealth/maxHealth));
+        if(lastHealth > currentHealth || lastHealth == currentHealth)
+        {
+            print(lastHealth);
+            vignetteRoutine = StartCoroutine(HealthVignetteUpdate(currentHealth / maxHealth));
+        }
 
         lastHealth = currentHealth;
+        print(lastHealth);
+        print(currentHealth);
     }
 
     private IEnumerator HealthVignetteUpdate(float lerp)
     {
         var t = 0.0f;
-        var target = Mathf.Lerp(0.0f, maxVignette, lerp);
+        var target = Mathf.Lerp(maxVignette, 0.0f, lerp);
         Color color = Color.white;
         color.a = 0;
 
@@ -62,7 +67,8 @@ public class HealthVignetteHandler : MonoBehaviour
         {
             yield return new WaitForFixedUpdate();
             t += Time.fixedDeltaTime;
-            color.a = Mathf.Lerp(0.0f, takeDamageAlpha, t / goInTakeDamageTime);
+            color.a = Mathf.Lerp(0.0f, takeDamageAlpha, t / goInTakeDamageTime)/255;
+
             spriteRenderer.color = color;
         }
 
@@ -72,11 +78,10 @@ public class HealthVignetteHandler : MonoBehaviour
         {
             yield return new WaitForFixedUpdate();
             t += Time.fixedDeltaTime;
-            color.a = Mathf.Lerp(takeDamageAlpha, target, t / goOutTakeDamageTime);
+            color.a = Mathf.Lerp(takeDamageAlpha, target, t / goOutTakeDamageTime)/255;
+
             spriteRenderer.color = color;
         }
-
-        print("End health change");
 
         vignetteRoutine = null;
     }
