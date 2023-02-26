@@ -6,13 +6,14 @@ public class NarrativeBehaviour : MonoBehaviour
 {
     public GameObject Discord;
 
-    public int Counter = 1;
+     public int Counter = 0;
 
     public GameObject T1;
     public GameObject T2;
     public GameObject T3;
     public GameObject T4;
     public GameObject T5;
+    public GameObject T6;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,7 @@ public class NarrativeBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheckCounter();
     }
 
     public void AddCounter()
@@ -60,6 +61,11 @@ public class NarrativeBehaviour : MonoBehaviour
         {
             T5.gameObject.SetActive(true);
             T4.gameObject.SetActive(false);
+        }
+        else if(Counter == 6)
+        {
+            T6.gameObject.SetActive(true);
+            T5.gameObject.SetActive(false);
         }
     }
 }

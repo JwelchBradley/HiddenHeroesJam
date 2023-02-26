@@ -63,6 +63,7 @@ MonoBehaviour:
     type: 3}
   thrownDamage: 50
   throwForce: 1500
+  knockbackDuration: 0.8
   throwUpForce: 100
   throwRotation: 15
   returningForce: 60
@@ -581,12 +582,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   corpse: {fileID: 0}
-  hurtSounds: []
+  hurtSounds:
+  - {fileID: 8300000, guid: 7ed1b7f9beb1b6a4d901504ccaa94b71, type: 3}
+  - {fileID: 8300000, guid: 9a097148e2a66bc4197d5c42fb32792d, type: 3}
+  - {fileID: 8300000, guid: 43d9189983f1b604d9ac1840146103cc, type: 3}
+  - {fileID: 8300000, guid: d1d64d2d860bb124fb1b480969f6dabd, type: 3}
   HealthChangeEvent:
     m_PersistentCalls:
       m_Calls: []
   isDead: 0
   startWithAxe: 1
+  Discord: {fileID: 4478675288479892922, guid: d29a7ac74c19f4ca7aa35f4a52aff86f, type: 3}
 --- !u!95 &659967977093692089
 Animator:
   serializedVersion: 4
@@ -891,7 +897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035747207123606144}
   m_LocalRotation: {x: -0.020871172, y: 0.9788261, z: -0.1557634, w: -0.13115531}
-  m_LocalPosition: {x: 0, y: 0.9569999, z: 0}
+  m_LocalPosition: {x: 0, y: 0.957, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
