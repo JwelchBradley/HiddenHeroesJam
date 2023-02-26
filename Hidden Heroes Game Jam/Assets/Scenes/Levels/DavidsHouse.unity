@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1399,6 +1399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09600b37ed000624d8fe17fa909dd7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setActiveObjects: []
+  setInactiveObjects: []
   solid: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
   semiclear: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
 --- !u!114 &733396190
@@ -1415,7 +1417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 4
+  outlineWidth: 30
   precomputeOutline: 1
   bakeKeys:
   - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
@@ -1549,6 +1551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09600b37ed000624d8fe17fa909dd7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setActiveObjects: []
+  setInactiveObjects: []
   solid: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
   semiclear: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
 --- !u!114 &864463842
@@ -1565,7 +1569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 4
+  outlineWidth: 30
   precomputeOutline: 1
   bakeKeys:
   - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
@@ -2475,7 +2479,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1606343944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2780,6 +2784,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f9649a0f0cc177f4e81d282d75cae832, type: 2}
+    - target: {fileID: 4577499403533695454, guid: be59b2947172f465e840b008f4e4f2c1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577499403533695454, guid: be59b2947172f465e840b008f4e4f2c1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 84
+      objectReference: {fileID: 0}
     - target: {fileID: 4817890179856177607, guid: be59b2947172f465e840b008f4e4f2c1,
         type: 3}
       propertyPath: m_Mesh
@@ -2840,6 +2854,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09600b37ed000624d8fe17fa909dd7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setActiveObjects: []
+  setInactiveObjects: []
   solid: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
   semiclear: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
 --- !u!114 &1723986065
@@ -2856,7 +2872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 4
+  outlineWidth: 30
   precomputeOutline: 1
   bakeKeys:
   - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
@@ -2892,7 +2908,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-378292
+  m_Name: pb_Mesh-337926
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3068,6 +3084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09600b37ed000624d8fe17fa909dd7e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setActiveObjects: []
+  setInactiveObjects: []
   solid: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
   semiclear: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
 --- !u!114 &1847356666
@@ -3084,7 +3102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 4
+  outlineWidth: 30
   precomputeOutline: 1
   bakeKeys:
   - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
@@ -3581,6 +3599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13128c0ed46677d42b4f24141a2907e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  setActiveObjects: []
+  setInactiveObjects:
+  - {fileID: 1606343943}
 --- !u!114 &1972897591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3595,7 +3616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 4
+  outlineWidth: 30
   precomputeOutline: 1
   bakeKeys:
   - {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}

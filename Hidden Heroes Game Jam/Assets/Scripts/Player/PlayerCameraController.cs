@@ -8,6 +8,7 @@ public class PlayerCameraController : MonoBehaviour
     #region Fields
     [SerializeField] private CinemachineVirtualCamera cinemachine;
     private CinemachineBasicMultiChannelPerlin cameraShake;
+    private CinemachineImpulseListener cameraShakeImpulse;
     private float mouseSens = 1.0f;
 
     private float xRot;
@@ -62,6 +63,11 @@ public class PlayerCameraController : MonoBehaviour
         xRot = Mathf.Clamp(xRot, -90, 90);
 
         transform.rotation = Quaternion.Euler(new Vector3(xRot, yRot));
+    }
+
+    public void ShakeImpulse()
+    {
+        cameraShakeImpulse.Invoke("", 1.0f);
     }
     #endregion
 }

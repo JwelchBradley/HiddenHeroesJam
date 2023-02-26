@@ -17,6 +17,9 @@ public abstract class Interactable : MonoBehaviour
     #region Fields
     private static GameObject PressE;
     private Outline outline;
+
+    [SerializeField] private List<GameObject> setActiveObjects = new List<GameObject>();
+    [SerializeField] private List<GameObject> setInactiveObjects = new List<GameObject>();
     #endregion
 
     #region Functions
@@ -33,7 +36,18 @@ public abstract class Interactable : MonoBehaviour
         }
     }
 
-    public abstract void ClickEvent();
+    public virtual void ClickEvent()
+    {
+        foreach(GameObject obj in setActiveObjects)
+        {
+            obj.SetActive(true);
+        }
+
+        foreach (GameObject obj in setInactiveObjects)
+        {
+            obj.SetActive(false);
+        }
+    }
 
     public virtual void HoverEvent()
     {

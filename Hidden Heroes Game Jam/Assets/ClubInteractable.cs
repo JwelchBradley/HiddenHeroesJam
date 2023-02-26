@@ -16,6 +16,8 @@ public class ClubInteractable : Interactable
     #region Functions
     public override void ClickEvent()
     {
+        base.ClickEvent();
+
         FindObjectOfType<PlayerController>().GetAxe();
         Destroy(gameObject);
     }

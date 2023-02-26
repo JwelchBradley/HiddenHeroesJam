@@ -44,6 +44,7 @@ public class PlayerController : Damageable
     public void GetAxe()
     {
         weapon = GetComponentInChildren<Weapon>();
+        weapon.gameObject.GetComponent<AxeWeapon>().ShowClub(true);
     }
 
     // Update is called once per frame
