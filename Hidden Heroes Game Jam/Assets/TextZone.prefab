@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 844643558209414295}
   - component: {fileID: 844643558209414292}
   - component: {fileID: 844643558209414288}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TextZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
