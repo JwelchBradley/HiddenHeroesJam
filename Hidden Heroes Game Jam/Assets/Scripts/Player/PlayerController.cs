@@ -22,8 +22,6 @@ public class PlayerController : Damageable
     {
         base.Awake();
 
-        currentScene = SceneManager.GetActiveScene().ToString();
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
