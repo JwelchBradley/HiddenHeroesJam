@@ -199,11 +199,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 656b3040dbe8f499bb3075c603d9c64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8.5
-  jumpWait: 1
+  moveSpeed: 7
+  jumpWait: 1.5
   jumpLength: 1
   extraGravity: 10
-  sprites: []
 --- !u!111 &8550457276536429579
 Animation:
   m_ObjectHideFlags: 0

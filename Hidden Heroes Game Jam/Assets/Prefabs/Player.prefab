@@ -63,6 +63,7 @@ MonoBehaviour:
     type: 3}
   thrownDamage: 50
   throwForce: 1500
+  knockbackDuration: 0.8
   throwUpForce: 100
   throwRotation: 15
   returningForce: 60
@@ -581,7 +582,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   corpse: {fileID: 0}
-  hurtSounds: []
+  hurtSounds:
+  - {fileID: 8300000, guid: 7ed1b7f9beb1b6a4d901504ccaa94b71, type: 3}
+  - {fileID: 8300000, guid: 9a097148e2a66bc4197d5c42fb32792d, type: 3}
+  - {fileID: 8300000, guid: 43d9189983f1b604d9ac1840146103cc, type: 3}
+  - {fileID: 8300000, guid: d1d64d2d860bb124fb1b480969f6dabd, type: 3}
   HealthChangeEvent:
     m_PersistentCalls:
       m_Calls: []
