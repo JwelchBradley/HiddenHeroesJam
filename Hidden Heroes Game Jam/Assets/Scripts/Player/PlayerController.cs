@@ -108,6 +108,7 @@ public class PlayerController : Damageable
     {
         if(healthMod < 0)
         {
+            if(cameraShakeSource != null)
             cameraShakeSource.GenerateImpulse();
         }
 
