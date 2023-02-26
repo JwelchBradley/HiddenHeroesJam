@@ -1403,6 +1403,7 @@ MonoBehaviour:
   setInactiveObjects: []
   solid: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
   semiclear: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
+  startOff: 1
 --- !u!114 &733396190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,6 +1554,7 @@ MonoBehaviour:
   setInactiveObjects: []
   solid: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
   semiclear: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
+  startOff: 0
 --- !u!114 &864463842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2584,6 +2586,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 402564413, guid: be59b2947172f465e840b008f4e4f2c1, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 402564414, guid: be59b2947172f465e840b008f4e4f2c1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402564417, guid: be59b2947172f465e840b008f4e4f2c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.6
+      objectReference: {fileID: 0}
     - target: {fileID: 474422730, guid: be59b2947172f465e840b008f4e4f2c1, type: 3}
       propertyPath: m_LocalScale.y
       value: 13.659119
@@ -2877,6 +2891,7 @@ MonoBehaviour:
   setInactiveObjects: []
   solid: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
   semiclear: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
+  startOff: 0
 --- !u!114 &1723986065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3105,6 +3120,7 @@ MonoBehaviour:
   setInactiveObjects: []
   solid: {fileID: 2100000, guid: 4a8d56b34765c4648a4f1cd88e54e124, type: 2}
   semiclear: {fileID: 2100000, guid: b3ef065c987b0b542b73f80fe401a4f4, type: 2}
+  startOff: 0
 --- !u!114 &1847356666
 MonoBehaviour:
   m_ObjectHideFlags: 0

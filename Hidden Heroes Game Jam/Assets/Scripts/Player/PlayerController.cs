@@ -11,6 +11,8 @@ public class PlayerController : Damageable
 
     string currentScene;
 
+    private Coroutine deathRoutine;
+
     private GameObject Discord;
     bool DiscordOn = false;
     #endregion
@@ -23,6 +25,17 @@ public class PlayerController : Damageable
 
         currentScene = SceneManager.GetActiveScene().ToString();
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        var healthBar = GameObject.Find("PlayerHealthBar");
+
+        if(healthBar != null)
+        HealthChangeEvent.AddListener(healthBar.GetComponent<HealthBarHandler>().UpdateHealthBar);
+    }
+
+    private void Start()
+    {
         if (startWithAxe)
         {
             GetAxe();
@@ -31,14 +44,6 @@ public class PlayerController : Damageable
         {
             RemoveAxe();
         }
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-
-        var healthBar = GameObject.Find("PlayerHealthBar");
-
-        if(healthBar != null)
-        HealthChangeEvent.AddListener(healthBar.GetComponent<HealthBarHandler>().UpdateHealthBar);
     }
 
     public void RemoveAxe()
@@ -61,7 +66,7 @@ public class PlayerController : Damageable
 
     private void WeaponInput()
     {
-        if (weapon == null) return;
+        if (weapon == null || isDead) return;
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -103,11 +108,25 @@ public class PlayerController : Damageable
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    protected override void DestructionEvent()
     {
-        if (collision.gameObject.tag == "Hazards")
+        if(deathRoutine == null)
+        deathRoutine = StartCoroutine(Death());
+    }
+
+    private IEnumerator Death()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        FindObjectOfType<MenuBehavior>().LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Hazards")
         {
-            SceneManager.LoadScene(currentScene);
+            UpdateHealth(-Mathf.Infinity);
+            //SceneManager.LoadScene(currentScene);
         }
     }
     #endregion

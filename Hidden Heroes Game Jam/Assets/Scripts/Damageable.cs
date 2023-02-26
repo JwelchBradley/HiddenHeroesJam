@@ -14,6 +14,8 @@ public class Damageable : MonoBehaviour
 
     public UnityEvent<float, float> HealthChangeEvent = new UnityEvent<float, float>();
 
+    [HideInInspector] public bool isDead = false;
+
     private float currentHealth = 0;
 
     protected float CurrentHealth
@@ -36,13 +38,17 @@ public class Damageable : MonoBehaviour
 
     public void UpdateHealth(float healthMod)
     {
-        CurrentHealth += healthMod;
-
-        CurrentHealth = Mathf.Clamp(CurrentHealth, 0, maxHealth);
-
-        if (CurrentHealth <= 0)
+        if(currentHealth != 0 || healthMod > 0)
         {
-            DestructionEvent();
+            CurrentHealth += healthMod;
+
+            CurrentHealth = Mathf.Clamp(CurrentHealth, 0, maxHealth);
+
+            if (CurrentHealth <= 0)
+            {
+                isDead = true;
+                DestructionEvent();
+            }
         }
     }
 

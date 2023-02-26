@@ -24,7 +24,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
 
     private Vector3 normal;
-    private List<GameObject> contactObjects = new List<GameObject>(); 
+    private List<GameObject> contactObjects = new List<GameObject>();
+
+    private PlayerController playerController;
     #endregion
 
     #region Functions
@@ -33,13 +35,24 @@ public class PlayerMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
+        playerController = FindObjectOfType<PlayerController>();
         cameraTransform = Camera.main.transform;
     }
 
     private void FixedUpdate()
     {
-        MovePlayer();
-        Jump();
+        if (!playerController.isDead)
+        {
+            MovePlayer();
+            Jump();
+        }
+        else
+        {
+            var newVel = rigidbody.velocity;
+            newVel.x = 0;
+            newVel.z = 0;
+            rigidbody.velocity = newVel;
+        }
     }
 
     private void MovePlayer()

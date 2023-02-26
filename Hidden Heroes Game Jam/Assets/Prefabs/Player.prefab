@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1273118783}
   - component: {fileID: 1273118784}
   - component: {fileID: 1616719638}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Axe
   m_TagString: Ax
   m_Icon: {fileID: 0}
@@ -51,6 +51,7 @@ MonoBehaviour:
   timeBetweenSwings: 0.5
   meleeRange: 6
   meleeDamage: 50
+  knockbackForce: 100
   meleeCameraShakeFrequency: 100
   meleeCameraShakeDuration: 0.5
   thrownAxePrefab: {fileID: 5067118392898219247, guid: e105c3bc601d49d42aaf153d6344b22c,
@@ -213,7 +214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3260072038350341973}
   - component: {fileID: 4385734646230388225}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Club_spritesheet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,6 +480,7 @@ MonoBehaviour:
   HealthChangeEvent:
     m_PersistentCalls:
       m_Calls: []
+  isDead: 0
   startWithAxe: 1
 --- !u!95 &659967977093692089
 Animator:
