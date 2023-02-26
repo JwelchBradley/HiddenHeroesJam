@@ -100,7 +100,7 @@ public class BasicEnemy : MonoBehaviour
     void Shoot()
     {
         GameObject newBullet = Instantiate(bullet, muzzle.transform.position, transform.rotation);
-        newBullet.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
+        newBullet.GetComponentInChildren<Rigidbody>().velocity = transform.forward * bulletSpeed;
         state = MoveState.DODGING;
         if(UFO)
             circleRand = Random.insideUnitCircle;
