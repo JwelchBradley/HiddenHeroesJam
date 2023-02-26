@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : Damageable
 {
     #region Fields
     private Weapon weapon;
     [SerializeField] private bool startWithAxe = true;
+
+    string currentScene;
 
     private GameObject Discord;
     bool DiscordOn = false;
@@ -17,6 +20,8 @@ public class PlayerController : Damageable
     protected override void Awake()
     {
         base.Awake();
+
+        currentScene = SceneManager.GetActiveScene().ToString();
 
         if (startWithAxe)
         {
@@ -44,6 +49,7 @@ public class PlayerController : Damageable
     public void GetAxe()
     {
         weapon = GetComponentInChildren<Weapon>();
+        weapon.gameObject.GetComponent<AxeWeapon>().ShowClub(true);
     }
 
     // Update is called once per frame
@@ -95,6 +101,14 @@ public class PlayerController : Damageable
         }
          
         
-    }    
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Hazards")
+        {
+            SceneManager.LoadScene(currentScene);
+        }
+    }
     #endregion
 }

@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +14,15 @@ public class AxeWeapon : Weapon
     [SerializeField] private float meleeRange = 1.0f;
     [SerializeField] private float meleeDamage = 1.0f;
 
+    [SerializeField] private float knockbackForce = 100.0f;
+
+    [SerializeField] private float meleeCameraShakeFrequency = 1.0f;
+    [SerializeField] private float meleeCameraShakeDuration = 0.3f;
+
+
     private float timeOfLastSwing = -Mathf.Infinity;
+
+    private CinemachineImpulseSource impulseSource;
 
     private BoxCollider meleeCollider;
     private List<Damageable> enemiesInMelee = new List<Damageable>();
@@ -79,6 +88,8 @@ public class AxeWeapon : Weapon
     #region Functions
     private void Awake()
     {
+        impulseSource = GetComponent<CinemachineImpulseSource>();
+
         club = GameObject.FindGameObjectWithTag("Club");
         club.GetComponent<SpriteRenderer>().enabled = true;
         clubAnimator = club.GetComponent<Animator>();
@@ -111,8 +122,11 @@ public class AxeWeapon : Weapon
     {
         timeOfLastSwing = Time.time;
 
+        impulseSource.GenerateImpulse();
         StartCoroutine(AttackFace());
         clubAnimator.SetTrigger("melee");
+
+        enemiesInMelee.Remove(null);
 
         foreach (Damageable damageable in enemiesInMelee)
         {
