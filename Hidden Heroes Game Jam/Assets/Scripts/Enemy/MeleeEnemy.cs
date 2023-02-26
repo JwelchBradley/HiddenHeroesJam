@@ -11,6 +11,7 @@ public class MeleeEnemy : MonoBehaviour
     float jumpTimer;
     public float jumpWait;
     public float jumpLength;
+    public float extraGravity;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +32,11 @@ public class MeleeEnemy : MonoBehaviour
             rb.velocity = moveDir * moveSpeed;
         }
         else
-            rb.velocity = Vector3.zero;
+            rb.velocity = Vector3.down * extraGravity;
 
         if (Time.time >= jumpTimer)
             Jump();
+
     }
 
     void Jump()
