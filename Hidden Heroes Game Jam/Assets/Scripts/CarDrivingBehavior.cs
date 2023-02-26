@@ -15,14 +15,17 @@ using UnityEngine.SceneManagement;
 public class CarDrivingBehavior : MonoBehaviour
 {
     #region Fields
-
+    public AudioSource audioSource;
+    public AudioClip mechLine;
     #endregion
 
     #region Functions
     // Start is called before the first frame update
     private void Awake()
     {
-        Invoke("SceneChange", 10);
+        //audioSource.GetComponent<AudioSource>();
+        audioSource.PlayOneShot(mechLine);
+        Invoke("SceneChange", 6);
     }
 
 
