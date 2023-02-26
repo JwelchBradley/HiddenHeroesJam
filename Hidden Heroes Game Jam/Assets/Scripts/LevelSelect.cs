@@ -32,7 +32,7 @@ public class LevelSelect : MonoBehaviour
         {
             SceneManager.LoadScene("GoldenHarbor");
         }
-        else if (levelName == "MechFlyover")
+        else if (levelName == "MechLevel")
         {
             SceneManager.LoadScene("MechFlyover");
         }

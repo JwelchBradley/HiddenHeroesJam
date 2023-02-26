@@ -32,7 +32,7 @@ public class NextLevel : MonoBehaviour
         }
         else if (levelName == "MechFlyover")
         {
-            SceneManager.LoadScene("MechFlyover");
+            SceneManager.LoadScene("MechLevel");
         }
         else if (levelName == "Evilition")
         {
