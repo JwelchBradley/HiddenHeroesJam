@@ -37,6 +37,7 @@ public class AxeWeapon : Weapon
 
     #region Throwing forces and rotations
     [SerializeField] private float throwForce = 100.0f;
+    [SerializeField] private float throwUpForce = 100.0f;
     [SerializeField] private float throwRotation = 15.0f;
     [SerializeField] private float returningForce = 100.0f;
     #endregion
@@ -212,6 +213,7 @@ public class AxeWeapon : Weapon
         var thrownAxe = Instantiate(thrownAxePrefab, transform.position, transform.rotation);
         var axRb = thrownAxe.GetComponent<Rigidbody>();
         axRb.AddForce(transform.forward * throwForce);
+        axRb.AddForce(Vector3.up * throwUpForce);
 
         axRb.angularVelocity = transform.right * throwRotation;
 
