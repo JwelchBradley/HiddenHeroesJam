@@ -45,21 +45,23 @@ public class ThrownAxeBehaviour : MonoBehaviour
         {
             other.gameObject.GetComponent<Damageable>().UpdateHealth(-damage);
         }
-
-        if (isReturning)
-        {
-            if (other.gameObject.CompareTag("Player"))
-            {
-                FindObjectOfType<AxeWeapon>().ShowClub(true);
-                Destroy(gameObject);
-            }
-        }
         else
         {
-            if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Ax"))
+            if (isReturning)
             {
-                Return();
-                StartCoroutine(WaitToReturn());
+                if (other.gameObject.CompareTag("Player"))
+                {
+                    FindObjectOfType<AxeWeapon>().ShowClub(true);
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Ax"))
+                {
+                    Return();
+                    StartCoroutine(WaitToReturn());
+                }
             }
         }
     }
