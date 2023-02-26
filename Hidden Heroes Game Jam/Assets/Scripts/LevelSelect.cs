@@ -34,7 +34,7 @@ public class LevelSelect : MonoBehaviour
         }
         else if (levelName == "MechLevel")
         {
-            SceneManager.LoadScene("MechFlyover");
+            SceneManager.LoadScene("MechLevel");
         }
         else if (levelName == "Evilition")
         {

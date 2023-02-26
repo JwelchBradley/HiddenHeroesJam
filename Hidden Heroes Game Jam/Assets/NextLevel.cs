@@ -30,7 +30,7 @@ public class NextLevel : MonoBehaviour
         {
             SceneManager.LoadScene("GoldenHarbor");
         }
-        else if (levelName == "MechFlyover")
+        else if (levelName == "MechLevel")
         {
             SceneManager.LoadScene("MechLevel");
         }
