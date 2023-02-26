@@ -50,6 +50,7 @@ public class ThrownAxeBehaviour : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player"))
             {
+                FindObjectOfType<AxeWeapon>().ShowClub(true);
                 Destroy(gameObject);
             }
         }

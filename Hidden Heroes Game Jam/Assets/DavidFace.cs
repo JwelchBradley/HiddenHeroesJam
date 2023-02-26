@@ -8,9 +8,13 @@ public class DavidFace : MonoBehaviour
     public Animator anim;
     Damageable dmg;
 
-    private void Start()
+    private void Awake()
     {
         anim = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
         dmg = GameObject.FindWithTag("Player").GetComponent<Damageable>();
 
         dmg.HealthChangeEvent.AddListener(UpdateHealthFace);
