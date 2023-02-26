@@ -41,6 +41,7 @@ public class AxeWeapon : Weapon
 
     #region Throwing forces and rotations
     [SerializeField] private float throwForce = 100.0f;
+    [SerializeField] private float knockbackDuration = 0.8f;
     [SerializeField] private float throwUpForce = 100.0f;
     [SerializeField] private float throwRotation = 15.0f;
     [SerializeField] private float returningForce = 100.0f;
@@ -144,7 +145,7 @@ public class AxeWeapon : Weapon
 
                 if (damageable.gameObject.TryGetComponent(out MeleeEnemy enemy))
                 {
-                    enemy.Knockback(knockbackForce, 0.3f);
+                    enemy.Knockback(knockbackForce, knockbackDuration);
                 }
                 else
                 {
