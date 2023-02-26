@@ -27,6 +27,8 @@ public class HealthBarHandler : MonoBehaviour
 
     public void UpdateHealthBar(float current, float max)
     {
+        if (healthbar == null) return;
+
         healthbar.fillAmount = current / max;
     }
     #endregion

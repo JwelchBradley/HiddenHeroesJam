@@ -34,7 +34,16 @@ public class HealthVignetteHandler : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<Image>();
-        FindObjectOfType<PlayerController>().HealthChangeEvent.AddListener(ChangeVignette);
+
+        var player = FindObjectOfType<PlayerController>();
+        if (player != null)
+        {
+            player.HealthChangeEvent.AddListener(ChangeVignette);
+        }
+        else
+        {
+            FindObjectOfType<Damageable>().HealthChangeEvent.AddListener(ChangeVignette);
+        }
     }
     
     private void ChangeVignette(float currentHealth, float maxHealth)

@@ -21,7 +21,16 @@ public class DeathScreen : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        FindObjectOfType<PlayerController>().HealthChangeEvent.AddListener(DieEvent);
+        var player = FindObjectOfType<PlayerController>();
+        if (player != null)
+        {
+            player.HealthChangeEvent.AddListener(DieEvent);
+        }
+        else
+        {
+            FindObjectOfType<Damageable>().HealthChangeEvent.AddListener(DieEvent);
+        }
+
         gameObject.SetActive(false);
     }
 
