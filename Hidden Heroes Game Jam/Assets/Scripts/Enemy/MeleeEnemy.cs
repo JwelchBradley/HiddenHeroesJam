@@ -13,8 +13,6 @@ public class MeleeEnemy : MonoBehaviour
     public float jumpLength;
     public float extraGravity;
 
-    public Sprite[] sprites;
-
     // Start is called before the first frame update
     void Start()
     {
