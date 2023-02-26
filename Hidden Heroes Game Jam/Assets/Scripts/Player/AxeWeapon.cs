@@ -126,10 +126,9 @@ public class AxeWeapon : Weapon
         StartCoroutine(AttackFace());
         clubAnimator.SetTrigger("melee");
 
-        enemiesInMelee.Remove(null);
-
         foreach (Damageable damageable in enemiesInMelee)
         {
+            if(damageable != null)
             damageable.UpdateHealth(-meleeDamage);
         }
     }
