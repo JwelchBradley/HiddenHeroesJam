@@ -7,6 +7,7 @@
 //
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -60,7 +61,7 @@ public class Outline : MonoBehaviour {
   private Color outlineColor = Color.white;
 
   [SerializeField, Range(0f, 10f)]
-  private float outlineWidth = 2f;
+  private float outlineWidth = 4f;
 
   [Header("Optional")]
 
@@ -80,7 +81,46 @@ public class Outline : MonoBehaviour {
 
   private bool needsUpdate;
 
-  void Awake() {
+    private float cyclingSpeed = 5.0f;
+    private List<Color> cyclingColors = new List<Color>();
+
+    private IEnumerator UpdateColor()
+    {
+        while (true)
+        {
+            foreach(Color color in cyclingColors)
+            {
+                var t = 0.0f;
+
+                while(t < 1.0f)
+                {
+                    t += Time.fixedDeltaTime* cyclingSpeed;
+                    t = Mathf.Clamp(t, 0, 1);
+                    OutlineColor = Color.Lerp(OutlineColor, color, t);
+
+                    yield return new WaitForFixedUpdate();
+                }
+            }
+        }
+
+    }
+
+
+    void Awake() {
+        var red = new Color(255, 0, 0);
+
+        var green = new Color(0, 255, 0);
+        var blue = new Color(0, 0, 255);
+        var yellow = new Color(255, 255, 0);
+        var orange = new Color(255, 165, 0);
+
+        cyclingColors.Add(red);
+        cyclingColors.Add(green);
+        cyclingColors.Add(blue);
+        cyclingColors.Add(yellow);
+        cyclingColors.Add(orange);
+
+        StartCoroutine(UpdateColor());
 
     // Cache renderers
     renderers = GetComponentsInChildren<Renderer>();

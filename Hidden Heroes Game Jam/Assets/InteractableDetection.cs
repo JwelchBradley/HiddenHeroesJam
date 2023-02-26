@@ -17,24 +17,29 @@ public class InteractableDetection : MonoBehaviour
     private const string interactableTag = "Interactable";
 
     protected Interactable hoverObject;
+    private Transform mainCamera;
     #endregion
 
     #region Functions
+    private void Awake()
+    {
+        mainCamera = Camera.main.transform;
+    }
+
     private void Update()
     {
-        if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 7.0f))
+        if(Physics.Raycast(mainCamera.position, mainCamera.forward, out RaycastHit hit, 7.0f))
         {
             if (hit.collider.gameObject.CompareTag(interactableTag))
             {
-                if(hoverObject != hit.collider.gameObject)
+                if(hoverObject == null)
                 {
-                    if(hoverObject != null)
-                    {
-                        hoverObject.UnHoverEvent();
-                    }
+                    HoverEvent(hit);
 
-                    hoverObject = hit.collider.gameObject.GetComponent<Interactable>();
-                    hoverObject.HoverEvent();
+                }
+                else if (hoverObject.gameObject != hit.collider.gameObject)
+                {
+                    HoverEvent(hit);
                 }
 
                 if (Input.GetKeyDown(KeyCode.E))
@@ -42,14 +47,32 @@ public class InteractableDetection : MonoBehaviour
                     hoverObject.ClickEvent();
                 }
             }
+            else
+            {
+                Unhover();
+            }
         }
         else
         {
-            if(hoverObject != null)
-            {
-                hoverObject.UnHoverEvent();
-            }
+            Unhover();
 
+            hoverObject = null;
+        }
+    }
+
+    private void HoverEvent(RaycastHit hit)
+    {
+        Unhover();
+
+        hoverObject = hit.collider.gameObject.GetComponent<Interactable>();
+        hoverObject.HoverEvent();
+    }
+
+    private void Unhover()
+    {
+        if (hoverObject != null)
+        {
+            hoverObject.UnHoverEvent();
             hoverObject = null;
         }
     }
