@@ -9,29 +9,32 @@
 *****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadMainMenuOnDeath : MonoBehaviour
 {
     #region Fields
-
+    private int deathIndex = 0;
     #endregion
 
     #region Functions
     public void CheckIfDead(float current, float max)
     {
-        if(current <= 0)
+        print("Current Health: " + current);
+
+        if(current == 0 && ++deathIndex == 8)
         {
-            StartCoroutine(LoadMain());
+            LoadMain();
         }
     }
 
-    private IEnumerator LoadMain()
+    private async void LoadMain()
     {
-        yield return new WaitForSeconds(5.0f);
-
+        await Task.Delay(5000);
         FindObjectOfType<MenuBehavior>().LoadScene(SceneManager.GetSceneByBuildIndex(0).name);
+
     }
     #endregion
 }

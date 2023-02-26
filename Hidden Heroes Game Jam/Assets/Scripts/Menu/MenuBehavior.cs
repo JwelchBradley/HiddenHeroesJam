@@ -108,6 +108,8 @@ public class MenuBehavior : MonoBehaviour
     /// <returns></returns>
     protected IEnumerator LoadSceneHelper(string sceneName)
     {
+        print("Loading: " + sceneName);
+
         crossfadeAnim.SetBool("levelEnd", true);
 
         yield return null;
