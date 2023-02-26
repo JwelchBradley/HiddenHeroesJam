@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 8550457275853988948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_LocalScale: {x: 3, y: 3, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6137852979618432576}
@@ -74,8 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
-    type: 3}
+  m_Sprite: {fileID: 1166025623, guid: 7124d911cce454191b62bab199ed7a91, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,6 +100,7 @@ GameObject:
   - component: {fileID: 8550457276536429569}
   - component: {fileID: 4127580512202257521}
   - component: {fileID: 5621398380705279842}
+  - component: {fileID: 878908226260137761}
   m_Layer: 0
   m_Name: Cruncher
   m_TagString: Enemy
@@ -116,7 +116,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8550457276536429568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -152,7 +152,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!114 &8550457276536429574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +215,26 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isDead: 0
+--- !u!95 &878908226260137761
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8550457276536429568}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f7821bd75cdf438e98ccdeaab1f749b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3766901188157725533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -275,17 +295,17 @@ PrefabInstance:
     - target: {fileID: 7019054013762608413, guid: b1af8e2f0a94cd049844a9a109b372eb,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7019054013762608413, guid: b1af8e2f0a94cd049844a9a109b372eb,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7019054013762608413, guid: b1af8e2f0a94cd049844a9a109b372eb,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7019054013762608413, guid: b1af8e2f0a94cd049844a9a109b372eb,
         type: 3}
@@ -330,7 +350,7 @@ PrefabInstance:
     - target: {fileID: 7019054013762608413, guid: b1af8e2f0a94cd049844a9a109b372eb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7019054013762608413, guid: b1af8e2f0a94cd049844a9a109b372eb,
         type: 3}
