@@ -114,6 +114,6 @@ public class BasicEnemy : MonoBehaviour
         stateTimer = Time.time + stunTime;
         state = MoveState.STUNNED;
 
-        rb.AddForce(transform.forward * -force);
+        rb.AddForce((player.transform.position - transform.position).normalized * -force);
     }
 }
