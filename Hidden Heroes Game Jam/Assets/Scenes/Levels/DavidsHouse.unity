@@ -597,7 +597,7 @@ Transform:
   - {fileID: 2064783780}
   - {fileID: 1998514429}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212398073
 GameObject:
@@ -2782,7 +2782,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 181.374, y: -1.6090088, z: 0.039001465}
 --- !u!1001 &1592708145
 PrefabInstance:
@@ -3923,6 +3923,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 211095051}
     m_Modifications:
+    - target: {fileID: 844643558209414288, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 151965861}
+    - target: {fileID: 844643558209414288, guid: 1312edc1c611941a8b19196e9c285a9d,
+        type: 3}
+      propertyPath: DiscordHUD
+      value: 
+      objectReference: {fileID: 1652227705}
     - target: {fileID: 844643558209414289, guid: 1312edc1c611941a8b19196e9c285a9d,
         type: 3}
       propertyPath: m_RootOrder
