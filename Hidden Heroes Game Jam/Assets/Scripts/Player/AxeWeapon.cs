@@ -271,8 +271,9 @@ public class AxeWeapon : Weapon
         var axRb = thrownAxe.GetComponent<Rigidbody>();
         axRb.AddForce(transform.forward * throwForce);
         axRb.AddForce(Vector3.up * throwUpForce);
-
         axRb.angularVelocity = transform.right * throwRotation;
+
+        thrownAxe.GetComponent<SpriteRenderer>().sprite = club.GetComponent<SpriteRenderer>().sprite;
 
         thrownAxeBehaviour = thrownAxe.GetComponent<ThrownAxeBehaviour>();
         thrownAxeBehaviour.damage = thrownDamage;
