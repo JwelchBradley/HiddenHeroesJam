@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class PlayerController : Damageable
 {
@@ -9,7 +10,7 @@ public class PlayerController : Damageable
     private Weapon weapon;
     [SerializeField] private bool startWithAxe = true;
 
-
+    private CinemachineImpulseSource cameraShakeSource;
     private Coroutine deathRoutine;
 
     public GameObject Discord;
@@ -21,6 +22,8 @@ public class PlayerController : Damageable
     protected override void Awake()
     {
         base.Awake();
+
+        cameraShakeSource = GetComponent<CinemachineImpulseSource>();
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -103,6 +106,16 @@ public class PlayerController : Damageable
         }
          
         
+    }
+
+    public override void UpdateHealth(float healthMod)
+    {
+        if(healthMod < 0)
+        {
+            cameraShakeSource.GenerateImpulse();
+        }
+
+        base.UpdateHealth(healthMod);
     }
 
     protected override void DestructionEvent()

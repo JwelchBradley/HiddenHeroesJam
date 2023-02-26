@@ -40,7 +40,7 @@ public class Damageable : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void UpdateHealth(float healthMod)
+    public virtual void UpdateHealth(float healthMod)
     {
         if(currentHealth != 0 || healthMod > 0)
         {
