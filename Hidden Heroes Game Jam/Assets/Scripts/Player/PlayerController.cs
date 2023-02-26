@@ -12,7 +12,7 @@ public class PlayerController : Damageable
 
     private Coroutine deathRoutine;
 
-    private GameObject Discord;
+    public GameObject Discord;
     bool DiscordOn = false;
     #endregion
 
@@ -90,13 +90,13 @@ public class PlayerController : Damageable
     {
         if (Discord == null) return;
 
-        if (Input.GetKeyDown(KeyCode.D) && DiscordOn == false)
+        if (Input.GetKeyDown(KeyCode.Tab) && DiscordOn == false)
         {
             Discord.SetActive(true);
             DiscordOn = true;
         }
 
-        else if (Input.GetKeyDown(KeyCode.D) && DiscordOn == true)
+        else if (Input.GetKeyDown(KeyCode.Tab) && DiscordOn == true)
         {
             Discord.SetActive(false);
             DiscordOn = false;
