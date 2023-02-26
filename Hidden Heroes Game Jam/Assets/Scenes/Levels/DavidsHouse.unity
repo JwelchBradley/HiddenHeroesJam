@@ -215,7 +215,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3426684
+  m_Name: pb_Mesh-1149268
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -789,7 +789,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3426712
+  m_Name: pb_Mesh-1149296
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1585,6 +1585,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 601886587}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &657323483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2900137700456351171, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2022536686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &676095802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6966306082209579569, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2022536686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &734036900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1677,7 +1689,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3427194
+  m_Name: pb_Mesh-1149778
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2335,7 +2347,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3427058
+  m_Name: pb_Mesh-1149642
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2493,6 +2505,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1314335648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6806852450700798972, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 2022536686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1360663402 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7965310537753305884, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
@@ -2511,7 +2529,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3426670
+  m_Name: pb_Mesh-1149254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2675,7 +2693,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3427172
+  m_Name: pb_Mesh-1149756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3392,7 +3410,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3426656
+  m_Name: pb_Mesh-1149240
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3765,7 +3783,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3427072
+  m_Name: pb_Mesh-1149656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4214,6 +4232,82 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 267533293460263895, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 140.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 341235958912767255, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009278020399858214, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_text
+      value: "Yeah he has to hold right click and angrily \ncharge his club up, before
+        throwing it."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1235605248187176037, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_text
+      value: "David,\nyou should save us with your club \nyou always tell us about."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663592448045380790, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_text
+      value: "Anybody got the code? Got kidnapped, \noh wait this isn't practicum.\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899955927022736585, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 437.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734482345869501135, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847916671872965674, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_text
+      value: "OMG David was that you in your mech? \ntotally reminds me of Gundam."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900137700456351171, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_Name
+      value: StoryDriver1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2900137700456351171, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195853548284319945, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050631696545394451, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 180.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110593231651953229, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 452.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110593231651953229, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 153.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329475232417915723, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4329475233034982704, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
         type: 3}
       propertyPath: m_Name
@@ -4324,6 +4418,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5412307164896206332, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_text
+      value: "anybody else remember the story of how David \nhas to throw his club
+        at a big dumb red button \nso he can get to his garage? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380736923794957822, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_text
+      value: "David, they took the kids to Golden Harbor.\nI would go to help but
+        I'm deathly allergic to \nchinese food. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6618828212913555180, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_text
+      value: "Help David, \nZavid Dabuz has taken us to the crunch culture room,"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6806852450700798972, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6892695869079502017, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 416.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966306082209579569, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6966306082209579569, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103689518371569638, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_text
+      value: "Yeah, didnt he say he has to use \nleft-click or something to use it. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 8530722970309587970, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 182.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f6046fd00da04fdc869fb811c4e3cb3, type: 3}
 --- !u!43 &2043167773
@@ -4332,7 +4473,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3426698
+  m_Name: pb_Mesh-1149282
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4755,27 +4896,42 @@ PrefabInstance:
         type: 3}
       propertyPath: T2
       value: 
-      objectReference: {fileID: 1102598002}
+      objectReference: {fileID: 1314335648}
     - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
         type: 3}
       propertyPath: T3
       value: 
-      objectReference: {fileID: 1866698514}
+      objectReference: {fileID: 1102598002}
     - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
         type: 3}
       propertyPath: T4
       value: 
-      objectReference: {fileID: 1381870269}
+      objectReference: {fileID: 676095802}
     - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
         type: 3}
       propertyPath: T5
       value: 
-      objectReference: {fileID: 1360663402}
+      objectReference: {fileID: 657323483}
     - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
         type: 3}
       propertyPath: T6
       value: 
       objectReference: {fileID: 547274118}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T7
+      value: 
+      objectReference: {fileID: 1866698514}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T8
+      value: 
+      objectReference: {fileID: 1381870269}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T9
+      value: 
+      objectReference: {fileID: 1360663402}
     - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
         type: 3}
       propertyPath: Discord
