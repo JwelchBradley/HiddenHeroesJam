@@ -101,11 +101,14 @@ public class ThrownAxeBehaviour : MonoBehaviour
                         colObj.Triggered();
                     }
 
-                    pastPositions.Dequeue();
+                    if(pastPositions.Count != 1)
                     pastPositions.Dequeue();
 
+                    if (pastPositions.Count != 1)
+                        pastPositions.Dequeue();
+
                     transform.rotation = startingRotation;
-                    transform.Rotate(transform.up, 90);
+                    transform.Rotate(transform.right, -30);
                     transform.position = pastPositions.First();
 
                     audioSource.Stop();
