@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 41348845}
   - component: {fileID: 41348847}
   - component: {fileID: 41348846}
+  - component: {fileID: 2054284287}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (15)
   m_TagString: Untagged
@@ -105,6 +106,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2054284287
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41348844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.2}
+  m_Center: {x: -0.0000009536743, y: 0, z: 0}
 --- !u!1 &203161405
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +130,7 @@ GameObject:
   - component: {fileID: 203161406}
   - component: {fileID: 203161408}
   - component: {fileID: 203161407}
+  - component: {fileID: 590801875}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (17)
   m_TagString: Untagged
@@ -210,6 +225,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &590801875
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203161405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: -0.0000009536743}
 --- !u!1 &414353179
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +249,7 @@ GameObject:
   - component: {fileID: 414353180}
   - component: {fileID: 414353182}
   - component: {fileID: 414353181}
+  - component: {fileID: 901991069}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (7)
   m_TagString: Untagged
@@ -315,6 +344,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &901991069
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414353179}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.2}
+  m_Center: {x: 0, y: 0, z: -0.00000047683716}
 --- !u!1 &540940745
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +368,7 @@ GameObject:
   - component: {fileID: 540940746}
   - component: {fileID: 540940748}
   - component: {fileID: 540940747}
+  - component: {fileID: 1130324731}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (10)
   m_TagString: Untagged
@@ -420,6 +463,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1130324731
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540940745}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400002, y: 1.23, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &599199958
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +487,7 @@ GameObject:
   - component: {fileID: 599199959}
   - component: {fileID: 599199961}
   - component: {fileID: 599199960}
+  - component: {fileID: 445550014}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (12)
   m_TagString: Untagged
@@ -525,6 +582,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &445550014
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599199958}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400001, y: 1.23, z: 0.20000003}
+  m_Center: {x: 0.00000047683716, y: 0, z: 0}
 --- !u!1 &603535278
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +606,7 @@ GameObject:
   - component: {fileID: 603535279}
   - component: {fileID: 603535281}
   - component: {fileID: 603535280}
+  - component: {fileID: 2091895102136933826}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (4)
   m_TagString: Untagged
@@ -630,6 +701,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2091895102136933826
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603535278}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.2}
+  m_Center: {x: -0.0000019073486, y: 0, z: 0.00000023841858}
 --- !u!1 &618175030
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,6 +822,7 @@ GameObject:
   - component: {fileID: 623205257}
   - component: {fileID: 623205259}
   - component: {fileID: 623205258}
+  - component: {fileID: 58061424}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (14)
   m_TagString: Untagged
@@ -832,6 +917,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &58061424
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623205256}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &636225490
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +941,7 @@ GameObject:
   - component: {fileID: 636225491}
   - component: {fileID: 636225493}
   - component: {fileID: 636225492}
+  - component: {fileID: 1872096011}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (11)
   m_TagString: Untagged
@@ -937,6 +1036,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1872096011
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636225490}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400001, y: 1.23, z: 0.20000003}
+  m_Center: {x: 0.0000009536743, y: 0, z: 0}
 --- !u!1 &721499476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1113,7 @@ GameObject:
   - component: {fileID: 805303958}
   - component: {fileID: 805303960}
   - component: {fileID: 805303959}
+  - component: {fileID: 2091895102136933827}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (3)
   m_TagString: Untagged
@@ -1095,6 +1208,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2091895102136933827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805303957}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400002, y: 1.23, z: 0.20000005}
+  m_Center: {x: 0.00000047683716, y: 0, z: -0.0000019073486}
 --- !u!1 &914665140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1329,7 @@ GameObject:
   - component: {fileID: 1105251600}
   - component: {fileID: 1105251602}
   - component: {fileID: 1105251601}
+  - component: {fileID: 600520101}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (20)
   m_TagString: Untagged
@@ -1297,6 +1424,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &600520101
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1105251599}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400001, y: 1.23, z: 0.20000003}
+  m_Center: {x: 0.0000009536743, y: 0, z: 0.0000019073486}
 --- !u!1 &1209148821
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,6 +1448,7 @@ GameObject:
   - component: {fileID: 1209148822}
   - component: {fileID: 1209148824}
   - component: {fileID: 1209148823}
+  - component: {fileID: 229879396}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (6)
   m_TagString: Untagged
@@ -1402,6 +1543,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &229879396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209148821}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400002, y: 1.23, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1324784964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,6 +1664,7 @@ GameObject:
   - component: {fileID: 1356881490}
   - component: {fileID: 1356881492}
   - component: {fileID: 1356881491}
+  - component: {fileID: 189778554}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (5)
   m_TagString: Untagged
@@ -1604,6 +1759,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &189778554
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356881489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.2}
+  m_Center: {x: 0.0000019073486, y: 0, z: -0.00000047683716}
 --- !u!1 &1417162865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,6 +1880,7 @@ GameObject:
   - component: {fileID: 1562757627}
   - component: {fileID: 1562757629}
   - component: {fileID: 1562757628}
+  - component: {fileID: 1968056972}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (8)
   m_TagString: Untagged
@@ -1806,6 +1975,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1968056972
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562757626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.20000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1577879789
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,6 +1999,7 @@ GameObject:
   - component: {fileID: 1577879790}
   - component: {fileID: 1577879792}
   - component: {fileID: 1577879791}
+  - component: {fileID: 162169889}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (21)
   m_TagString: Untagged
@@ -1911,6 +2094,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &162169889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577879789}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400001, y: 1.23, z: 0.20000003}
+  m_Center: {x: 0, y: 0, z: 0.0000019073486}
 --- !u!1 &1590564140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +2312,7 @@ GameObject:
   - component: {fileID: 1704386199}
   - component: {fileID: 1704386201}
   - component: {fileID: 1704386200}
+  - component: {fileID: 2120278962}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (18)
   m_TagString: Untagged
@@ -2210,6 +2407,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2120278962
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704386198}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400002, y: 1.23, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: -0.0000019073486}
 --- !u!1 &1743785890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2221,6 +2431,7 @@ GameObject:
   - component: {fileID: 1743785891}
   - component: {fileID: 1743785893}
   - component: {fileID: 1743785892}
+  - component: {fileID: 1504347149}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (16)
   m_TagString: Untagged
@@ -2315,6 +2526,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1504347149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743785890}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400002, y: 1.23, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1775966051
 GameObject:
   m_ObjectHideFlags: 0
@@ -2423,6 +2647,7 @@ GameObject:
   - component: {fileID: 1819641797}
   - component: {fileID: 1819641796}
   - component: {fileID: 1819641795}
+  - component: {fileID: 2091895102136933829}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (1)
   m_TagString: Untagged
@@ -2517,6 +2742,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2091895102136933829
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819641794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400002, y: 1.23, z: 0.20000005}
+  m_Center: {x: 0.00000011920929, y: 0, z: 0}
 --- !u!1 &1937629341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,6 +2766,7 @@ GameObject:
   - component: {fileID: 1937629344}
   - component: {fileID: 1937629343}
   - component: {fileID: 1937629342}
+  - component: {fileID: 2091895102136933830}
   m_Layer: 0
   m_Name: fireSpreadsheet_12
   m_TagString: Untagged
@@ -2622,6 +2861,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2091895102136933830
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937629341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1400002, y: 1.23, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1953565428
 GameObject:
   m_ObjectHideFlags: 0
@@ -2633,6 +2885,7 @@ GameObject:
   - component: {fileID: 1953565429}
   - component: {fileID: 1953565431}
   - component: {fileID: 1953565430}
+  - component: {fileID: 386529726}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (13)
   m_TagString: Untagged
@@ -2727,6 +2980,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &386529726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953565428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.2}
+  m_Center: {x: -0.0000019073486, y: 0, z: 0}
 --- !u!1 &1981300850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2738,6 +3004,7 @@ GameObject:
   - component: {fileID: 1981300851}
   - component: {fileID: 1981300853}
   - component: {fileID: 1981300852}
+  - component: {fileID: 2091895102136933828}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (2)
   m_TagString: Untagged
@@ -2832,6 +3099,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2091895102136933828
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981300850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.20000003}
+  m_Center: {x: 0, y: 0, z: 0.0000009536743}
 --- !u!1 &1997115377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2843,6 +3123,7 @@ GameObject:
   - component: {fileID: 1997115378}
   - component: {fileID: 1997115380}
   - component: {fileID: 1997115379}
+  - component: {fileID: 1461619923}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (19)
   m_TagString: Untagged
@@ -2937,6 +3218,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1461619923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997115377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0.0000019073486}
 --- !u!1 &2133649630
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +3242,7 @@ GameObject:
   - component: {fileID: 2133649631}
   - component: {fileID: 2133649633}
   - component: {fileID: 2133649632}
+  - component: {fileID: 457422631}
   m_Layer: 0
   m_Name: fireSpreadsheet_12 (9)
   m_TagString: Untagged
@@ -3042,6 +3337,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &457422631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133649630}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.14, y: 1.23, z: 0.2}
+  m_Center: {x: 0.0000019073486, y: 0, z: 0}
 --- !u!1 &2091895101812115358
 GameObject:
   m_ObjectHideFlags: 0

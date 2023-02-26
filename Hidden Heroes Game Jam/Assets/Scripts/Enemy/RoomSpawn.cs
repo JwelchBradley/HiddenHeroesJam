@@ -11,17 +11,20 @@ public class RoomSpawn : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (this.enabled)
         {
-            foreach(GameObject spawn in spawns)
+            if (other.gameObject.tag == "Player")
             {
-                spawn.SetActive(true);
+                foreach (GameObject spawn in spawns)
+                {
+                    spawn.SetActive(true);
+                }
+
+                if (realWall)
+                    realWall.SetActive(true);
+
+                this.enabled = false;
             }
-
-            if(realWall)
-                realWall.SetActive(true);
-
-            this.enabled = false;
         }
     }
 }

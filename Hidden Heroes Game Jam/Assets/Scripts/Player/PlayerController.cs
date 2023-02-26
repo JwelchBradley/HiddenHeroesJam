@@ -9,7 +9,6 @@ public class PlayerController : Damageable
     private Weapon weapon;
     [SerializeField] private bool startWithAxe = true;
 
-    string currentScene;
 
     private Coroutine deathRoutine;
 
