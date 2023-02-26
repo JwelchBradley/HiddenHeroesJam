@@ -2222,6 +2222,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1171881944, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6000061
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171881944, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3200073
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171881944, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8597531
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171881944, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.060068414
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171881944, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.49637866
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171881944, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.10404155
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171881944, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171881944, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171881944, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 13.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171881945, guid: 51e57dd88e98f944faefbb872bfaa107, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5024440720183019755, guid: 51e57dd88e98f944faefbb872bfaa107,
         type: 3}
       propertyPath: m_RootOrder
@@ -3957,7 +3997,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3066222
+  m_Name: pb_Mesh-73554
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

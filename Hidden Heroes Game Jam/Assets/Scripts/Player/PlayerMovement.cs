@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rigidbody;
     private Transform cameraTransform;
     private Animator animator;
+    private Animator clubAnimator;
 
     private float currentGravity = 0.0f;
 
@@ -33,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        var club = GameObject.FindGameObjectWithTag("Club");
+        clubAnimator = club.GetComponent<Animator>();
+
         animator = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody>();
         playerController = FindObjectOfType<PlayerController>();
@@ -64,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
 
         var isMoving = xMove != 0 || yMove != 0;
         animator.SetBool("IsWalking", isMoving);
+        clubAnimator.SetBool("isWalking", isMoving);
 
         if (contactObjects.Count != 0)
         {
