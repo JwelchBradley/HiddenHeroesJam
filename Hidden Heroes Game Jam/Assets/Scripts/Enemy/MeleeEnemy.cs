@@ -20,7 +20,8 @@ public class MeleeEnemy : MonoBehaviour
         anim = GetComponent<Animation>();
         player = GameObject.FindWithTag("Player").transform;
 
-        GetComponentInChildren<SpriteRenderer>().GetComponent<Animator>().SetInteger("Bug", Random.Range(1,4));
+        if(GetComponentInChildren<SpriteRenderer>().GetComponent<Animator>())
+            GetComponentInChildren<SpriteRenderer>().GetComponent<Animator>().SetInteger("Bug", Random.Range(1,4));
     }
 
     // Update is called once per frame
@@ -46,7 +47,8 @@ public class MeleeEnemy : MonoBehaviour
     void Jump()
     {
         jumpTimer = Time.time + jumpLength + jumpWait;
-        anim.Play();
+        if(anim)
+            anim.Play();
     }
 
     public void Knockback(float force, float stunTime = 1f)
