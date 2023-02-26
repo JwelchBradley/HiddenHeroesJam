@@ -14,13 +14,28 @@ using UnityEngine;
 public class CollisionObjects : MonoBehaviour
 {
     #region Fields
-    public GameObject triggerObject;
+    public GameObject[] destroys;
+
+    public GameObject[] spawns;
     #endregion
 
     #region Functions
-    private void OnTriggerEnter(Collider other)
+    public void Triggered()
     {
-        Destroy(triggerObject);
+        if (enabled)
+        {
+            foreach (GameObject spawn in spawns)
+            {
+                spawn.SetActive(true);
+            }
+
+            foreach (GameObject destroy in destroys)
+            {
+                Destroy(destroy);
+            }
+
+            enabled = false;
+        }
     }
 
     #endregion
