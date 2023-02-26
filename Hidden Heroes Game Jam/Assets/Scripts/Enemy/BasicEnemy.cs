@@ -34,11 +34,19 @@ public class BasicEnemy : MonoBehaviour
     public GameObject muzzle;
     public GameObject bullet;
 
+    AudioSource audioSource;
+    public AudioClip[] spawnSounds;
+    public AudioClip[] shootSounds;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        if(spawnSounds.Length > 0)
+            audioSource.PlayOneShot(spawnSounds[Random.Range(0, spawnSounds.Length)]);
+
         rb = GetComponent<Rigidbody>();
-        player = GameObject.FindWithTag("Player").transform;
+        player = Camera.main.transform;
 
         state = MoveState.COMING;
     }
@@ -99,8 +107,10 @@ public class BasicEnemy : MonoBehaviour
 
     void Shoot()
     {
+        if (shootSounds.Length > 0)
+            audioSource.PlayOneShot(shootSounds[Random.Range(0, shootSounds.Length)]);
         GameObject newBullet = Instantiate(bullet, muzzle.transform.position, transform.rotation);
-        newBullet.GetComponentInChildren<Rigidbody>().velocity = transform.forward * bulletSpeed;
+        newBullet.GetComponentInChildren<Rigidbody>().velocity = (player.transform.position - muzzle.transform.position).normalized * bulletSpeed;
         state = MoveState.DODGING;
         if(UFO)
             circleRand = Random.insideUnitCircle;
@@ -114,6 +124,6 @@ public class BasicEnemy : MonoBehaviour
         stateTimer = Time.time + stunTime;
         state = MoveState.STUNNED;
 
-        rb.AddForce((player.transform.position - transform.position).normalized * -force);
+        rb.AddForce(transform.forward * -force);
     }
 }

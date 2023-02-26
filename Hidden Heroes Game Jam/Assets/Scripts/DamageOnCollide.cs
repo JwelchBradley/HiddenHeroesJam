@@ -8,16 +8,28 @@ public class DamageOnCollide : MonoBehaviour
 
     float cooldown;
 
+    public bool onTrigger;
     public bool shouldDestroy;
 
     private void OnCollisionEnter(Collision collision)
+    {
+        Collided(collision.collider);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (onTrigger)
+        {
+            Collided(other);
+        }
+    }
+
+    void Collided(Collider collision)
     {
         if (Time.time > cooldown)
         {
             if (collision.gameObject.tag == "Player")
             {
-                print("Dealy Damge");
-
                 collision.gameObject.GetComponent<Damageable>().UpdateHealth(-damage);
                 cooldown = Time.time + 0.5f;
                 if (shouldDestroy)
