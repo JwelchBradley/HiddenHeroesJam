@@ -364,28 +364,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: '<u>Controls</U>
 
-    <b>Move:</b> WASD
+    <b>Move</b> WASD
 
-    <b>Move Vertically</b> Q =
-    down and E = up
+    <b>Melee</b> Left Click
 
-    <b>Fly:</b> hold shift
+    <b>Charge
+    Club</b> HOLD Right Click
 
-    <b>Dash:</b> double-tap button
-    WASD Q or E
-
-    <b>Aim:</b> Mouse
-
-    <b>Shoot:</b> Left-click
-
-    <b>ADS:</b>
-    Right-click
-
-    <b>Open Pause:</b> - Esc
-
-    <b>Abilities</b> 1, 2, 3
-
-'
+    <b>Throw Club</b> RELEASE Right Click'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fd9ac2fdee2c34606a74ea335eee2d38, type: 2}
   m_sharedMaterial: {fileID: 6629376581257774187, guid: fd9ac2fdee2c34606a74ea335eee2d38,
@@ -607,7 +593,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ccff87836bccfc449a6b3741df68a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldImmmediate: 0
 --- !u!1 &5557274338778725655
 GameObject:
   m_ObjectHideFlags: 0
