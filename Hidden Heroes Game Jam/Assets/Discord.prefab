@@ -6524,7 +6524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Oh no David, Evolition has ALIENS! '
+  m_text: 'Oh no David, Evilition has ALIENS! '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 112673e0f22f844e995b205e9f3f3440, type: 2}
   m_sharedMaterial: {fileID: -8460872572571766636, guid: 112673e0f22f844e995b205e9f3f3440,
@@ -10838,7 +10838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Anybody wanna play master duel ?
+  m_text: 'Anybody wanna play master duel?
 
     while we''re kidnapped?'
   m_isRightToLeft: 0
