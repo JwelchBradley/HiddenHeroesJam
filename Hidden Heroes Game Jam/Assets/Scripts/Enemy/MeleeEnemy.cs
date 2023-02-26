@@ -55,6 +55,6 @@ public class MeleeEnemy : MonoBehaviour
     {
         jumpTimer = Time.time + stunTime;
 
-        rb.AddForce(transform.forward * -force);
+        rb.velocity = transform.forward * -force;
     }
 }
