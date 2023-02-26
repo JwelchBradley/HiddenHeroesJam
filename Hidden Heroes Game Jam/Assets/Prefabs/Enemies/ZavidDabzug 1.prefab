@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 150
-  corpse: {fileID: 2166230941864369550, guid: f66e2eae13c7e40858d138a11ceca6dd, type: 3}
+  corpse: {fileID: 418750032862112066, guid: 8524eb02e2dc54d72a2ad7d61895d2a3, type: 3}
   hurtSounds:
   - {fileID: 8300000, guid: 7ed1b7f9beb1b6a4d901504ccaa94b71, type: 3}
   - {fileID: 8300000, guid: 9a097148e2a66bc4197d5c42fb32792d, type: 3}
@@ -239,6 +239,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78927e3bea0494852bb49e53163bd955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  phase: 1
+  normalSprites: []
+  greenSprites: []
+  invisColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2804975805397135347
 GameObject:
   m_ObjectHideFlags: 0
