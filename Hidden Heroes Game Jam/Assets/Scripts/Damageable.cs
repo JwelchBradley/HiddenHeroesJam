@@ -12,6 +12,9 @@ public class Damageable : MonoBehaviour
     [Tooltip("The object to spawn on death")]
     [SerializeField] public GameObject corpse;
 
+    public AudioClip[] hurtSounds;
+    AudioSource audioSource;
+
     public UnityEvent<float, float> HealthChangeEvent = new UnityEvent<float, float>();
 
     [HideInInspector] public bool isDead = false;
@@ -34,6 +37,7 @@ public class Damageable : MonoBehaviour
     protected virtual void Awake()
     {
         CurrentHealth = maxHealth;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void UpdateHealth(float healthMod)
@@ -41,6 +45,14 @@ public class Damageable : MonoBehaviour
         if(currentHealth != 0 || healthMod > 0)
         {
             CurrentHealth += healthMod;
+
+            if(healthMod < 0)
+            {
+                if(hurtSounds.Length > 0)
+                {
+                    audioSource.PlayOneShot(hurtSounds[Random.Range(0, hurtSounds.Length)]);
+                }
+            }
 
             CurrentHealth = Mathf.Clamp(CurrentHealth, 0, maxHealth);
 

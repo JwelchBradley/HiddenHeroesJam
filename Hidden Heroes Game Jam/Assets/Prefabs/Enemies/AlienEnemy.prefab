@@ -117,10 +117,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  corpse: {fileID: 0}
+  corpse: {fileID: 6743175813028633019, guid: 37fadfae887204a20b58c8c44fc30617, type: 3}
   HealthChangeEvent:
     m_PersistentCalls:
       m_Calls: []
+  isDead: 0
 --- !u!95 &6585866965810055825
 Animator:
   serializedVersion: 4
