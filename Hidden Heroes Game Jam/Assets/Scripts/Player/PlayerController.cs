@@ -14,8 +14,10 @@ public class PlayerController : Damageable
 
     #region Functions
     // Start is called before the first frame update
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         if (startWithAxe)
         {
             GetAxe();
