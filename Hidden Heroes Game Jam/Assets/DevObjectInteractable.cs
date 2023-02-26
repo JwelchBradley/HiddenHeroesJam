@@ -26,6 +26,8 @@ public class DevObjectInteractable : Interactable
     public Material solid;
     public Material semiclear;
 
+    [SerializeField] private bool startOff = false;
+
     private MeshRenderer meshRenderer;
     #endregion
 
@@ -38,6 +40,11 @@ public class DevObjectInteractable : Interactable
         LayerNoCollison = LayerMask.NameToLayer("NoPlayerCollisions");
         LayerNormal = LayerMask.NameToLayer("Default");
         isOn = true;
+
+        if (startOff)
+        {
+            ClickEvent();
+        }
     }
 
     public override void ClickEvent()
