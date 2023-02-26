@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NotifcationManager : MonoBehaviour
 {
-    public GameObject DiscordHUD;
+    private GameObject DiscordNotification;
     public NarrativeBehaviour Manager;
     [SerializeField] private AudioClip discordPing;
 
@@ -14,6 +14,7 @@ public class NotifcationManager : MonoBehaviour
     private void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        DiscordNotification = GameObject.Find("Discord Notification");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,7 +26,7 @@ public class NotifcationManager : MonoBehaviour
                 audioSource.PlayOneShot(discordPing);
 
                 Manager.AddCounter();
-                DiscordHUD.gameObject.SetActive(true);
+                DiscordNotification.gameObject.SetActive(true);
 
                 enabled = false;
             }
