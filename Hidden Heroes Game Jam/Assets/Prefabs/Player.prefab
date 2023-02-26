@@ -55,7 +55,7 @@ MonoBehaviour:
   timeBetweenSwings: 0.5
   meleeRange: 4
   meleeDamage: 50
-  knockbackForce: 30
+  knockbackForce: 10
   meleeCameraShakeFrequency: 100
   meleeCameraShakeDuration: 0.5
   throwSound: {fileID: 8300000, guid: ce279d022774a5040a5836df1a572d2e, type: 3}
@@ -64,7 +64,7 @@ MonoBehaviour:
     type: 3}
   thrownDamage: 50
   throwForce: 1500
-  knockbackDuration: 0.8
+  knockbackDuration: 0.4
   throwUpForce: 100
   throwRotation: 15
   returningForce: 60
@@ -961,7 +961,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035747207123606144}
   m_LocalRotation: {x: -0.020871172, y: 0.9788261, z: -0.1557634, w: -0.13115531}
-  m_LocalPosition: {x: 0, y: 0.9569999, z: 0}
+  m_LocalPosition: {x: 0, y: 0.957, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
