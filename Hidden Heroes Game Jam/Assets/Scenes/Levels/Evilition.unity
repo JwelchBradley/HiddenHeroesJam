@@ -2995,6 +2995,12 @@ Transform:
   m_Father: {fileID: 551734322}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 169.059, y: -15.234985, z: -1.9769897}
+--- !u!1 &641941778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2734482345869501135, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 764377821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &646381886
 GameObject:
   m_ObjectHideFlags: 0
@@ -3276,6 +3282,11 @@ PrefabInstance:
       propertyPath: m_text
       value: "Got kidnapped, not gonna make it practicum, \nanybody got the code?"
       objectReference: {fileID: 0}
+    - target: {fileID: 1708747455109158288, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1926921162759897607, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
         type: 3}
       propertyPath: m_IsActive
@@ -3285,6 +3296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607015157389377474, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 330
       objectReference: {fileID: 0}
     - target: {fileID: 2734482345869501135, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
         type: 3}
@@ -3299,12 +3315,17 @@ PrefabInstance:
     - target: {fileID: 4329475232417915723, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4329475233034982704, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
         type: 3}
       propertyPath: m_Name
       value: DiscordCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4329475233034982704, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4329475233034982708, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
         type: 3}
@@ -3420,6 +3441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 413.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9055624557415306326, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+        type: 3}
+      propertyPath: m_text
+      value: 'I know I should of stayed in the animation capstone. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f6046fd00da04fdc869fb811c4e3cb3, type: 3}
@@ -3550,6 +3576,12 @@ Transform:
   m_Father: {fileID: 551734322}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 170.693, y: -16.824005, z: -2.2780151}
+--- !u!1 &850472978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1382285822206165708, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 764377821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &863083087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4804,6 +4836,12 @@ Transform:
   m_Father: {fileID: 551734322}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 181.646, y: -14.893005, z: -1.8659973}
+--- !u!1 &1163293937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3333361372222502046, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 764377821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1180451900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5419,6 +5457,41 @@ PrefabInstance:
       propertyPath: T2
       value: 
       objectReference: {fileID: 2047518219}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T3
+      value: 
+      objectReference: {fileID: 850472978}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T4
+      value: 
+      objectReference: {fileID: 1812769565}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T5
+      value: 
+      objectReference: {fileID: 641941778}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T6
+      value: 
+      objectReference: {fileID: 1163293937}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T7
+      value: 
+      objectReference: {fileID: 537586525}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T8
+      value: 
+      objectReference: {fileID: 537586525}
+    - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
+        type: 3}
+      propertyPath: T9
+      value: 
+      objectReference: {fileID: 537586525}
     - target: {fileID: 1119532988945371854, guid: b938a0a79ceb74e3a8d6b4006ae164e0,
         type: 3}
       propertyPath: Discord
@@ -7060,7 +7133,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: My World is crumbling around crumbling around me.
+  m_text: My world is crumbling around me.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 112673e0f22f844e995b205e9f3f3440, type: 2}
   m_sharedMaterial: {fileID: -8460872572571766636, guid: 112673e0f22f844e995b205e9f3f3440,
@@ -7566,6 +7639,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8550457276536429578, guid: 835e5fde001ce4956ad9405073577e0c,
     type: 3}
   m_PrefabInstance: {fileID: 1793790790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1812769565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7965310537753305884, guid: 6f6046fd00da04fdc869fb811c4e3cb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 764377821}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1821486215
 GameObject:
