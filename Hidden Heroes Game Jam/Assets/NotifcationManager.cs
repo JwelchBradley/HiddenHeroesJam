@@ -8,7 +8,7 @@ public class NotifcationManager : MonoBehaviour
     
 
     public GameObject DiscordHUD;
-    public GameObject Manager;
+    public NarrativeBehaviour Manager;
     
 
     // Start is called before the first frame update
@@ -26,16 +26,16 @@ public class NotifcationManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (this.enabled)
+        if (enabled)
         {
             if (other.gameObject.tag == "Player")
             {
-                Manager.gameObject.GetComponent<NarrativeBehaviour>().AddCounter();
+                Manager.AddCounter();
                 DiscordHUD.gameObject.SetActive(true);
+
+                enabled = false;
             }
         }
-
-        this.enabled = false;
     }
 
 }
