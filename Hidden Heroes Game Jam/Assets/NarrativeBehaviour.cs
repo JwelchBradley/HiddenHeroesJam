@@ -14,6 +14,9 @@ public class NarrativeBehaviour : MonoBehaviour
     public GameObject T4;
     public GameObject T5;
     public GameObject T6;
+    public GameObject T7;
+    public GameObject T8;
+    public GameObject T9;
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +69,23 @@ public class NarrativeBehaviour : MonoBehaviour
         {
             T6.gameObject.SetActive(true);
             T5.gameObject.SetActive(false);
+        }
+
+        else if(Counter == 7)
+        {
+            T7.gameObject.SetActive(true);
+            T6.gameObject.SetActive(false);
+        }
+
+        else if(Counter == 8)
+        {
+            T8.gameObject.SetActive(true);
+            T7.gameObject.SetActive(false);
+        }
+        else if(Counter == 9)
+        {
+            T9.gameObject.SetActive(true);
+            T8.gameObject.SetActive(false);
         }
     }
 }
