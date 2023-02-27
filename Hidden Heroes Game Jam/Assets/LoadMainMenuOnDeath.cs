@@ -16,24 +16,32 @@ using UnityEngine.SceneManagement;
 public class LoadMainMenuOnDeath : MonoBehaviour
 {
     #region Fields
-    private int deathIndex = 0;
+    private bool isInfinalPhase = false;
+    private ZavidDabzug zabid;
     #endregion
 
     #region Functions
-    public void CheckIfDead(float current, float max)
+    private void Update()
     {
-        print("Current Health: " + current);
 
-        if(current == 0 && ++deathIndex == 8)
+        if (zabid == null)
         {
-            LoadMain();
+            zabid = FindObjectOfType<ZavidDabzug>();
+
+            if(isInfinalPhase)
+            StartCoroutine(LoadMain());
+        }
+        else
+        {
+            if (zabid.phase == 4) isInfinalPhase = true;
+            print("Phase: " + zabid.phase);
         }
     }
 
-    private async void LoadMain()
+    private IEnumerator LoadMain()
     {
-        await Task.Delay(5000);
-        FindObjectOfType<MenuBehavior>().LoadScene(SceneManager.GetSceneByBuildIndex(0).name);
+        yield return new WaitForSeconds(9.0f);
+        FindObjectOfType<MenuBehavior>().LoadScene("Main Menu");
 
     }
     #endregion
