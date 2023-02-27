@@ -43,7 +43,7 @@ public class LoadMainMenuOnDeath : MonoBehaviour
     {
         hasStartedLoad = true;
         yield return new WaitForSeconds(9.0f);
-        FindObjectOfType<MenuBehavior>().LoadScene("BaccisBonus");
+        FindObjectOfType<MenuBehavior>().LoadScene("Main Menu");
 
     }
     #endregion
