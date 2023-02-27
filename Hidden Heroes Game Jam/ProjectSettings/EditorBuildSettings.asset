@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CarDriving.unity
     guid: 7fdce3576a238446bbba4c9aa66d4212
+  - enabled: 1
+    path: Assets/Scenes/Levels/BaccisBonus.unity
+    guid: 7e554ca5e27179c4aa5744c2aa1ee9bf
   m_configObjects: {}

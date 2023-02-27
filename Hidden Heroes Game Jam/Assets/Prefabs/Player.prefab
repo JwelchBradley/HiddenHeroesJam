@@ -68,7 +68,7 @@ MonoBehaviour:
   knockbackDuration: 0.4
   throwUpForce: 100
   throwRotation: 15
-  returningForce: 60
+  returningForce: 45
   timeBeforeReturning: 1
   timeBeforeGaruanteedReturn: 8
   aimZoom: 0.8
@@ -962,7 +962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8035747207123606144}
   m_LocalRotation: {x: -0.020871172, y: 0.9788261, z: -0.1557634, w: -0.13115531}
-  m_LocalPosition: {x: 0, y: 0.957, z: 0}
+  m_LocalPosition: {x: 0, y: 0.95700014, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -17,6 +17,7 @@ public class LoadMainMenuOnDeath : MonoBehaviour
 {
     #region Fields
     private bool isInfinalPhase = false;
+    private bool hasStartedLoad = false;
     private ZavidDabzug zabid;
     #endregion
 
@@ -28,7 +29,7 @@ public class LoadMainMenuOnDeath : MonoBehaviour
         {
             zabid = FindObjectOfType<ZavidDabzug>();
 
-            if(isInfinalPhase)
+            if(isInfinalPhase && !hasStartedLoad)
             StartCoroutine(LoadMain());
         }
         else
@@ -40,8 +41,9 @@ public class LoadMainMenuOnDeath : MonoBehaviour
 
     private IEnumerator LoadMain()
     {
+        hasStartedLoad = true;
         yield return new WaitForSeconds(9.0f);
-        FindObjectOfType<MenuBehavior>().LoadScene("Main Menu");
+        FindObjectOfType<MenuBehavior>().LoadScene("BaccisBonus");
 
     }
     #endregion
