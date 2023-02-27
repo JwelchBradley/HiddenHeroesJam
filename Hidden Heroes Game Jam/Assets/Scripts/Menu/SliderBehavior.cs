@@ -6,6 +6,7 @@
 // Brief Description : Handles the sliders in the opitons menu.
 *****************************************************************************/
 using Cinemachine;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -47,6 +48,12 @@ public class SliderBehavior : MonoBehaviour
     [SerializeField]
     [Tooltip("The audio mixer that is to be modified")]
     private AudioMixer audioMixer;
+
+    [SerializeField] private float playSoundDelay = 0.8f;
+
+    private AudioSource audioSource;
+
+    private Coroutine delaySoundRoutine;
     #endregion
 
     private PlayerCameraController cameraController;
@@ -59,6 +66,8 @@ public class SliderBehavior : MonoBehaviour
     void Awake()
     {
         slider = GetComponent<Slider>();
+
+        audioSource = GetComponent<AudioSource>();
 
         cameraController = FindObjectOfType<PlayerCameraController>();
 
@@ -106,6 +115,23 @@ public class SliderBehavior : MonoBehaviour
             SetSetting(PlayerPrefs.GetFloat(variableName));
         }
     }
+
+    private IEnumerator PlayVolumeSound()
+    {
+        yield return new WaitForSecondsRealtime(playSoundDelay);
+
+        if(Time.timeScale == 0)
+        {
+            audioSource.ignoreListenerPause = true;
+            audioSource.Play();
+            delaySoundRoutine = null;
+        }
+        else
+        {
+            audioSource.Play();
+            delaySoundRoutine = null;
+        }
+    }
     #endregion
 
     public void SetSetting(float sliderValue)
@@ -151,7 +177,17 @@ public class SliderBehavior : MonoBehaviour
 
         audioMixer.SetFloat(variableName, vol);
 
-        if(slider == null)
+        if (PlayerPrefs.HasKey(variableName) && PlayerPrefs.GetFloat(variableName) != sliderValue)
+        {
+            if (gameObject.activeInHierarchy)
+            {
+                if (delaySoundRoutine != null) StopCoroutine(delaySoundRoutine);
+
+                delaySoundRoutine = StartCoroutine(PlayVolumeSound());
+            }
+        }
+
+        if (slider == null)
         {
             TryGetComponent(out Slider slider);
             this.slider = slider;

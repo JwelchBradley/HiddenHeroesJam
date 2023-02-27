@@ -51,7 +51,8 @@ MonoBehaviour:
   davidAttackFaceTime: 0.5
   bloodyClub: {fileID: -102222614, guid: 61c7dd2bf987b4a6b9757a68cb3b88c8, type: 3}
   holdInputRefTime: 0.25
-  meleeSound: {fileID: 0}
+  meleeSound: {fileID: 8300000, guid: feb28bd1845601b42843c4c76979e1f9, type: 3}
+  hitMeleeSound: {fileID: 8300000, guid: 8ee59c26b18b9694391920498458b08f, type: 3}
   timeBetweenSwings: 0.5
   meleeRange: 4
   meleeDamage: 50

@@ -15,6 +15,8 @@ public class AxeWeapon : Weapon
     private Coroutine holdInputReference;
 
     [SerializeField] private AudioClip meleeSound;
+    [SerializeField] private AudioClip hitMeleeSound;
+
     [SerializeField] private float timeBetweenSwings = 0.5f;
     [SerializeField] private float meleeRange = 1.0f;
     [SerializeField] private float meleeDamage = 1.0f;
@@ -144,8 +146,27 @@ public class AxeWeapon : Weapon
     {
         timeOfLastSwing = Time.time;
 
-        if(meleeSound != null)
-        audioSource.PlayOneShot(meleeSound);
+        List<Damageable> damageablesToRemove = new List<Damageable>();
+
+        foreach(Damageable damageable in enemiesInMelee)
+        {
+            if(damageable == null)
+            damageablesToRemove.Add(damageable);
+        }
+
+        foreach(Damageable damageable in damageablesToRemove)
+        {
+            enemiesInMelee.Remove(damageable);
+        }
+
+        if(enemiesInMelee.Count > 0)
+        {
+            audioSource.PlayOneShot(hitMeleeSound);
+        }
+        else
+        {
+            audioSource.PlayOneShot(meleeSound);
+        }
 
         impulseSource.GenerateImpulse();
         StartCoroutine(AttackFace());

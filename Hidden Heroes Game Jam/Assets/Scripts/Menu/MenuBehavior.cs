@@ -86,7 +86,7 @@ public class MenuBehavior : MonoBehaviour
 
     private IEnumerator DelayAudio(AudioSource audio)
     {
-        yield return new WaitForSeconds(minTimeBetweenAudio);
+        yield return new WaitForSecondsRealtime(minTimeBetweenAudio);
 
         blackListAudioSource.Remove(audio);
     }

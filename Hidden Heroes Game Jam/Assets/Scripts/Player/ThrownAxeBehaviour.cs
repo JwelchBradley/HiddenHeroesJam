@@ -20,6 +20,9 @@ public class ThrownAxeBehaviour : MonoBehaviour
     [HideInInspector] public float returningForce;
     [HideInInspector] public float timeBeforeGaruanteedReturn;
 
+    [SerializeField] private AudioClip hitSound;
+    [SerializeField] private AudioClip hitEnemySound;
+
     private float spawnProtectionTime = 0.02f;
     private float spawnTime;
     private Queue<Vector3> pastPositions = new Queue<Vector3>();
@@ -69,6 +72,8 @@ public class ThrownAxeBehaviour : MonoBehaviour
             var damageable = other.gameObject.GetComponent<Damageable>();
             damageable.UpdateHealth(-damage);
 
+            audioSource.PlayOneShot(hitEnemySound);
+
             var force = isReturning ? -20 : 10;
 
             if (damageable.gameObject.TryGetComponent(out MeleeEnemy enemy))
@@ -112,6 +117,7 @@ public class ThrownAxeBehaviour : MonoBehaviour
                     transform.position = pastPositions.First();
 
                     audioSource.Stop();
+                    audioSource.PlayOneShot(hitSound);
 
                     Return();
                     StartCoroutine(WaitToReturn());
