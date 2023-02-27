@@ -453,8 +453,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 82445949572634835, guid: d0731aef8cf251d4d9f335f77cb78cb8,
         type: 3}
+      propertyPath: maxVignette
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 82445949572634835, guid: d0731aef8cf251d4d9f335f77cb78cb8,
+        type: 3}
       propertyPath: takeDamageAlpha
       value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: 82445949572634835, guid: d0731aef8cf251d4d9f335f77cb78cb8,
+        type: 3}
+      propertyPath: goInTakeDamageTime
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 82445949572634835, guid: d0731aef8cf251d4d9f335f77cb78cb8,
+        type: 3}
+      propertyPath: goOutTakeDamageTime
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3785561785789879200, guid: d0731aef8cf251d4d9f335f77cb78cb8,
         type: 3}
@@ -565,6 +580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3785561786545320666, guid: d0731aef8cf251d4d9f335f77cb78cb8,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7973694760866678128, guid: d0731aef8cf251d4d9f335f77cb78cb8,
         type: 3}
