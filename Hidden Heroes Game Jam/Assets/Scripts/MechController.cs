@@ -68,6 +68,11 @@ public class MechController : MonoBehaviour
                 {
                     hit.transform.GetComponent<Damageable>().UpdateHealth(-25);
                 }
+                else if (hit.transform.gameObject.tag == "Baccis" && enabled)
+                {
+                    FindObjectOfType<MenuBehavior>().LoadScene("BaccisBonus");
+                    enabled = false;
+                }
             }
             lasers[0].enabled = true;
             lasers[updatesLate].enabled = true;
