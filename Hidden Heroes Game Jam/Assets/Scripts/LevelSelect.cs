@@ -24,7 +24,11 @@ public class LevelSelect : MonoBehaviour
  
     public void buttonClick(string levelName)
     {
-        if (levelName == "DavidsHouse")
+        if(levelName == "Opening")
+        {
+            SceneManager.LoadScene("Opening");
+        }
+        else if (levelName == "DavidsHouse")
         {
             SceneManager.LoadScene("DavidsHouse");
         }
