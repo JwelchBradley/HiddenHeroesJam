@@ -11,6 +11,7 @@ public class MechController : MonoBehaviour
     LineRenderer[] lasers;
 
     int updatesLate = 10;
+    int bacciCounter = 0;
 
     public Transform cam;
 
@@ -70,8 +71,13 @@ public class MechController : MonoBehaviour
                 }
                 else if (hit.transform.gameObject.tag == "Baccis" && enabled)
                 {
-                    FindObjectOfType<MenuBehavior>().LoadScene("BaccisBonus");
-                    enabled = false;
+                    bacciCounter++;
+
+                    if (bacciCounter == 10)
+                    {
+                        FindObjectOfType<MenuBehavior>().LoadScene("BaccisBonus");
+                        enabled = false;
+                    }
                 }
             }
             lasers[0].enabled = true;
