@@ -1,11 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class MechController : MonoBehaviour
 {
     Rigidbody rb;
     DavidFace face;
+
+    [SerializeField] private CinemachineImpulseSource shootCameraShake;
+
+    private float timeOfLastShotSound = -Mathf.Infinity;
+    [SerializeField] private float timeBetweenShotSounds = 0.1f;
+    [SerializeField] private AudioClip shootSound;
+    private AudioSource audioSource;
 
     public GameObject laserObj;
     LineRenderer[] lasers;
@@ -21,6 +29,7 @@ public class MechController : MonoBehaviour
 
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         face = FindObjectOfType<DavidFace>();
 
@@ -62,6 +71,13 @@ public class MechController : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
+            if(timeBetweenShotSounds+timeOfLastShotSound < Time.time)
+            {
+                shootCameraShake.GenerateImpulse();
+                timeOfLastShotSound = Time.time;
+                audioSource.PlayOneShot(shootSound);
+            }
+
             RaycastHit hit;
             if (Physics.Raycast(new Ray(cam.position, cam.forward), out hit, 100))
             {

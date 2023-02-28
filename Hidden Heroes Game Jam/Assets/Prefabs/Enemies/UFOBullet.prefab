@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1494122808225349643}
   - component: {fileID: 8422632769789948752}
   - component: {fileID: 5438652226148317241}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UFOBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

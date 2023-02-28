@@ -9,14 +9,17 @@
 *****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Outline))]
 public abstract class Interactable : MonoBehaviour
 {
     #region Fields
-    private static GameObject PressE;
+    protected static GameObject PressE;
     private Outline outline;
+
+    protected string message = "Press E to debug";
 
     [SerializeField] private List<GameObject> setActiveObjects = new List<GameObject>();
     [SerializeField] private List<GameObject> setInactiveObjects = new List<GameObject>();
@@ -30,7 +33,7 @@ public abstract class Interactable : MonoBehaviour
 
         if (PressE == null)
         {
-            PressE = GameObject.Find("Press E");
+            PressE = FindObjectOfType<DebugUIHandler>(true).gameObject;
 
             if (PressE != null) PressE.SetActive(false);
         }
@@ -52,6 +55,7 @@ public abstract class Interactable : MonoBehaviour
     public virtual void HoverEvent()
     {
         outline.enabled = true;
+        PressE.gameObject.GetComponent<TextMeshProUGUI>().text = message;
 
         if (PressE != null) PressE.SetActive(true);
     }

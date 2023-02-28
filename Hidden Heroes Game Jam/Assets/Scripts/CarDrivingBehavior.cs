@@ -25,7 +25,7 @@ public class CarDrivingBehavior : MonoBehaviour
     {
         //audioSource.GetComponent<AudioSource>();
         audioSource.PlayOneShot(mechLine);
-        Invoke("SceneChange", 6);
+        Invoke("SceneChange", 4.5f);
     }
 
 

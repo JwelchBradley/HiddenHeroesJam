@@ -1,5 +1,5 @@
 /*****************************************************************************
-// File Name :         ClubInteractable.cs
+// File Name :         DebugUIHandler.cs
 // Author :            #AUTHOR#
 // Contact :           #CONTACT#
 // Creation Date :     #DATE#
@@ -11,22 +11,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClubInteractable : Interactable
+public class DebugUIHandler : MonoBehaviour
 {
+    #region Fields
+
+    #endregion
+
     #region Functions
-    private void Start()
+    // Start is called before the first frame update
+    private void Awake()
     {
-        message = "Press E to grab club";
+        
     }
 
-    public override void ClickEvent()
+    // Update is called once per frame
+    private void FixedUpdate()
     {
-        base.ClickEvent();
-
-        PressE.SetActive(false);
-
-        FindObjectOfType<PlayerController>().GetAxe();
-        Destroy(gameObject);
+        
     }
     #endregion
 }

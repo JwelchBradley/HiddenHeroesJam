@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9121211496615822116}
   - component: {fileID: 8491532446759258976}
   - component: {fileID: 540916996538315143}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AlienBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 3083595901034412609}
   - component: {fileID: 7795594778740031907}
   - component: {fileID: 2686954662412133455}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5031,7 +5031,7 @@ GameObject:
   - component: {fileID: 8229198474262507184}
   - component: {fileID: 5699110209297437090}
   - component: {fileID: 2962074355529950925}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: AlienBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

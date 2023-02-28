@@ -9,6 +9,8 @@ public class TextScript : MonoBehaviour
     bool loading;
     
     public AudioSource DayOff;
+    public AudioSource music;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,7 @@ public class TextScript : MonoBehaviour
          {
             Invoke("SwapScene", 1f);
             DayOff.Play();
+            music.Stop();
             loading = true;
         }
     }

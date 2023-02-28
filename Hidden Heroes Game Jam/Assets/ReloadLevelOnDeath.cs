@@ -1,5 +1,5 @@
 /*****************************************************************************
-// File Name :         ClubInteractable.cs
+// File Name :         ReloadLevelOnDeath.cs
 // Author :            #AUTHOR#
 // Contact :           #CONTACT#
 // Creation Date :     #DATE#
@@ -10,23 +10,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class ClubInteractable : Interactable
+public class ReloadLevelOnDeath : MonoBehaviour
 {
+    #region Fields
+    private bool hasLoaded = false;
+    #endregion
+
     #region Functions
-    private void Start()
+    public void CheckForDeath(float current, float max)
     {
-        message = "Press E to grab club";
-    }
-
-    public override void ClickEvent()
-    {
-        base.ClickEvent();
-
-        PressE.SetActive(false);
-
-        FindObjectOfType<PlayerController>().GetAxe();
-        Destroy(gameObject);
+        if(current == 0 && !hasLoaded)
+        {
+            hasLoaded = true;
+            FindObjectOfType<MenuBehavior>().LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
     #endregion
 }

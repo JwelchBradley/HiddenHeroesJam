@@ -112,7 +112,7 @@ public class MenuBehavior : MonoBehaviour
 
         crossfadeAnim.SetBool("levelEnd", true);
 
-        yield return null;
+        yield return new WaitForSecondsRealtime(1.0f);
 
         AsyncOperation loadOp;
 
@@ -128,7 +128,7 @@ public class MenuBehavior : MonoBehaviour
         
         loadOp.allowSceneActivation = false;
 
-        yield return new WaitForSecondsRealtime(crossfadeAnim.GetCurrentAnimatorStateInfo(0).length);
+        //yield return new WaitForSecondsRealtime(crossfadeAnim.GetCurrentAnimatorStateInfo(0).length);
 
         // Resets game
         Time.timeScale = 1;
