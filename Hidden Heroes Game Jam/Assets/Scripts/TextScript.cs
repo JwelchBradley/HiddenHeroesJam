@@ -6,7 +6,7 @@ public class TextScript : MonoBehaviour
 {
     [SerializeField] private float scrollSpeed = 20f;
     public string levelName;
-    bool SpacePressed = false;
+    bool loading;
     
     public AudioSource DayOff;
     // Start is called before the first frame update
@@ -20,28 +20,16 @@ public class TextScript : MonoBehaviour
     {
         transform.Translate(Camera.main.transform.up * scrollSpeed * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && !loading)
          {
-            StartCoroutine (SceneSwitcher());
+            Invoke("SwapScene", 1f);
             DayOff.Play();
-           
-
-        }
-
-        if(SpacePressed == true)
-        {
-
-            FindObjectOfType<MenuBehavior>().LoadScene(levelName);
+            loading = true;
         }
     }
 
-    IEnumerator SceneSwitcher()
+    void SwapScene()
     {
-        yield return new WaitForSeconds(1);
-
-        SpacePressed = true;
-
-        Debug.Log("its working");
-
+        FindObjectOfType<MenuBehavior>().LoadScene(levelName);
     }
 }
